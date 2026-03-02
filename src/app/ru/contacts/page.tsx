@@ -38,8 +38,8 @@ export default function ContactsPage() {
                         <table className="w-full">
                             <tbody className="divide-y divide-[var(--border-light)]">
                                 <tr>
-                                    <td className="py-2.5 font-medium text-[var(--text-primary)] pr-4">Call-центр</td>
-                                    <td className="py-2.5"><a href="tel:3000103" className="text-[var(--primary)] hover:underline">3000-103</a></td>
+                                    <td className="py-2.5 font-medium text-[var(--text-primary)] pr-4">Телефон доверия</td>
+                                    <td className="py-2.5"><a href="tel:1303" className="text-[var(--primary)] hover:underline">13-03</a></td>
                                 </tr>
                                 <tr>
                                     <td className="py-2.5 font-medium text-[var(--text-primary)] pr-4">ЕКЦ</td>

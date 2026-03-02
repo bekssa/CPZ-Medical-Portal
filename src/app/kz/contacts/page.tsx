@@ -12,7 +12,7 @@ export default function KzContactsPage() {
                         Телефондар
                     </h2>
                     <div className="space-y-2 text-sm text-[var(--text-secondary)]">
-                        <div><strong className="text-[var(--primary)]">Call-орталық:</strong> <a href="tel:3000103" className="hover:text-[var(--primary)]">3000-103</a></div>
+                        <div><strong className="text-[var(--primary)]">Сенім телефоны:</strong> <a href="tel:1303" className="hover:text-[var(--primary)]">13-03</a></div>
                         <div><strong>ЕКО:</strong> <a href="tel:1414" className="hover:text-[var(--primary)]">14-14</a></div>
                         <div><strong>Республикалық:</strong> <a href="tel:3580" className="hover:text-[var(--primary)]">3580</a></div>
                         <div><strong className="text-[var(--primary)]">Сенім телефоны:</strong> <a href="tel:1303" className="hover:text-[var(--primary)]">13-03</a></div>

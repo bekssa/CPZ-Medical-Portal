@@ -233,16 +233,13 @@ export default function KzPage() {
 
                             {/* Call Center */}
                             <a
-                                href="tel:3000103"
+                                href="tel:1303"
                                 className="block rounded-xl border-2 border-[var(--primary)] bg-white p-3 hover:shadow-md transition-shadow no-underline"
                             >
-                                <Image
-                                    src="/images/badges/call-center.png"
-                                    alt="Call Центр 3000-103"
-                                    width={200}
-                                    height={100}
-                                    className="w-full h-auto object-contain"
-                                />
+                                <div className="flex flex-col items-center justify-center p-2 rounded-xl bg-[var(--primary-light)] text-[var(--primary)]">
+                                    <div className="text-sm font-semibold mb-1">Сенім телефоны</div>
+                                    <div className="text-2xl font-bold tracking-tight">13-03</div>
+                                </div>
                             </a>
 
                             {/* DamuMed */}
@@ -294,10 +291,9 @@ export default function KzPage() {
                                     Байланыстар
                                 </h3>
                                 <div className="space-y-2.5 text-sm text-[var(--text-secondary)]">
-                                    <div><strong className="text-[var(--primary)]">Call-орталық:</strong> <a href="tel:3000103" className="hover:text-[var(--primary)] transition-colors">3000-103</a></div>
+                                    <div><strong className="text-[var(--primary)]">Сенім телефоны:</strong> <a href="tel:1303" className="hover:text-[var(--primary)] transition-colors">13-03</a></div>
                                     <div><strong>ЕКО:</strong> <a href="tel:1414" className="hover:text-[var(--primary)] transition-colors">14-14</a></div>
                                     <div><strong>Республикалық:</strong> <a href="tel:3580" className="hover:text-[var(--primary)] transition-colors">3580</a></div>
-                                    <div><strong className="text-[var(--primary)]">Сенім телефоны:</strong> <a href="tel:1303" className="hover:text-[var(--primary)] transition-colors">13-03</a></div>
                                     <div><a href="tel:+77273765660" className="hover:text-[var(--primary)] transition-colors">Психиатриялық: +7 727 376-56-60</a></div>
                                     <div><a href="tel:+77273823462" className="hover:text-[var(--primary)] transition-colors">Наркологиялық: +7 727 382-34-62</a></div>
                                     <div><a href="tel:+77474966420" className="hover:text-[var(--primary)] transition-colors">Балалар бөлімшесі: 8 747 496 64 20</a></div>

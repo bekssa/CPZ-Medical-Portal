@@ -10,7 +10,7 @@ const baseNavigation: NavItem[] = [
     title: 'Главная',
     href: '/',
     children: [
-      { title: 'Телефон Call-центра: 3000-103', href: '/call-center' },
+      { title: 'Телефон доверия: 13-03', href: '/call-center' },
     ],
   },
   {
@@ -99,7 +99,7 @@ const baseNavigationKz: NavItem[] = [
     title: 'Бастапқы',
     href: '/',
     children: [
-      { title: 'Call орталық телефоны: 3000-103', href: '/call-center' },
+      { title: 'Сенім телефоны: 13-03', href: '/call-center' },
     ],
   },
   {

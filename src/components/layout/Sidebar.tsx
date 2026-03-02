@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState, useMemo } from 'react';
 import { navigation, kazakhNavigation, NavItem } from '@/data/navigation';
 
@@ -24,11 +24,13 @@ function NavSection({
     depth = 0,
     pathname,
     searchQuery,
+    onClose,
 }: {
     item: NavItem;
     depth?: number;
     pathname: string;
     searchQuery: string;
+    onClose?: () => void;
 }) {
     const isActive = pathname === item.href;
     const isParentActive = pathname.startsWith(item.href) && item.href !== '/';
@@ -65,6 +67,9 @@ function NavSection({
             <div className="flex items-center">
                 <Link
                     href={item.href}
+                    onClick={() => {
+                        if (onClose) onClose();
+                    }}
                     className={`flex-1 flex items-center gap-2 px-3 py-2 ${paddingLeft} text-sm rounded-lg transition-all duration-150 no-underline
             ${isActive
                             ? 'bg-[var(--primary-light)] text-[var(--primary-dark)] font-medium'
@@ -105,6 +110,7 @@ function NavSection({
                             depth={depth + 1}
                             pathname={pathname}
                             searchQuery={searchQuery}
+                            onClose={onClose}
                         />
                     ))}
                 </div>
@@ -121,15 +127,45 @@ export default function Sidebar({
     onClose: () => void;
 }) {
     const pathname = usePathname();
+    const router = useRouter();
     const [searchQuery, setSearchQuery] = useState('');
 
+    const handleLanguageSwitch = (newLang: 'RU' | 'KZ' | 'EN') => {
+        if (newLang === 'EN') return;
+        const currentPath = pathname.replace(/^\/(ru|kz)(\/|$)/, '/');
+        const newPath = newLang === 'RU' ? `/ru${currentPath}` : `/kz${currentPath}`;
+        router.push(newPath);
+    };
+
     // Определяем текущий язык и выбираем соответствующую навигацию
-    const currentNavigation = (pathname === '/kz' || pathname.startsWith('/kz/')) ? kazakhNavigation : navigation;
+    const isKz = pathname === '/kz' || pathname.startsWith('/kz/');
+    const currentNavigation = isKz ? kazakhNavigation : navigation;
 
     return (
         <>
 
             <div className="flex flex-col h-full">
+                {/* Mobile Language Switcher */}
+                <div className="p-3 border-b border-[var(--border-light)] sm:hidden">
+                    <div className="flex items-center w-full bg-gray-50 border border-[var(--border-light)] rounded-lg p-1">
+                        {(['RU', 'KZ', 'EN'] as const).map((l) => (
+                            <button
+                                key={l}
+                                onClick={() => handleLanguageSwitch(l)}
+                                disabled={l === 'EN'}
+                                className={`flex-1 py-1.5 text-xs font-bold transition-all rounded-md ${(isKz && l === 'KZ') || (!isKz && l === 'RU')
+                                    ? 'bg-[#0e40df] text-white shadow-sm'
+                                    : l === 'EN'
+                                        ? 'text-gray-300 cursor-not-allowed'
+                                        : 'text-gray-500 hover:bg-white hover:text-[#0e40df]'
+                                    }`}
+                            >
+                                {l}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Sidebar search */}
                 <div className="p-3 border-b border-[var(--border-light)]">
                     <div className="relative">
@@ -161,25 +197,22 @@ export default function Sidebar({
                             item={item}
                             pathname={pathname}
                             searchQuery={searchQuery}
+                            onClose={onClose}
                         />
                     ))}
                 </nav>
 
                 {/* Bottom info */}
                 <div className="p-4 mt-4 border-t border-[var(--border-light)]">
-                    <div className="text-xs text-[var(--text-muted)] space-y-1">
-                        <div className="flex items-center gap-2">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" strokeWidth="1.5" />
-                            </svg>
-                            <span>Телефон доверия: <strong>13-03</strong></span>
+                    <div className="text-xs text-[var(--text-muted)] space-y-2">
+                        <div className="flex flex-col gap-1">
+                            <span className="font-semibold text-gray-700">{isKz ? 'Сенім телефондары' : 'Телефоны доверия'}:</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                                <rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.5" />
-                                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" stroke="currentColor" strokeWidth="1.5" />
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-[#0e40df]">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" strokeWidth="1.5" />
                             </svg>
-                            <span>Call-центр: <strong>3000-103</strong></span>
+                            <span><strong className="text-gray-900">13-03</strong></span>
                         </div>
                     </div>
                 </div>

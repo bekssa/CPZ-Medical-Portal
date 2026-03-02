@@ -243,16 +243,13 @@ export default function HomePage() {
 
               {/* Call Center */}
               <a
-                href="tel:3000103"
+                href="tel:1303"
                 className="block rounded-2xl border-2 border-[var(--primary)] bg-white p-3 hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
               >
-                <Image
-                  src="/images/badges/call-center.png"
-                  alt="Call Центр 3000-103"
-                  width={200}
-                  height={100}
-                  className="w-full h-auto object-contain"
-                />
+                <div className="flex flex-col items-center justify-center p-2 rounded-xl bg-[var(--primary-light)] text-[var(--primary)]">
+                  <div className="text-sm font-semibold mb-1">Телефон доверия</div>
+                  <div className="text-2xl font-bold tracking-tight">13-03</div>
+                </div>
               </a>
 
               {/* DamuMed */}
@@ -296,23 +293,22 @@ export default function HomePage() {
               </div>
 
               {/* Contact card */}
-              <div className="p-5 rounded-2xl border border-[var(--border)] bg-white shadow-[var(--shadow-soft)]">
-                <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-[var(--primary)]">
+              <div className="p-4 rounded-xl border border-[var(--border)] bg-gray-50 shadow-sm">
+                <h3 className="text-sm font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[var(--primary)]">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" strokeWidth="1.5" />
                   </svg>
                   Контакты
                 </h3>
-                <div className="space-y-2.5 text-sm text-[var(--text-secondary)]">
-                  <div><strong className="text-[var(--primary)]">Call-центр:</strong> <a href="tel:3000103" className="hover:text-[var(--primary)] transition-colors">3000-103</a></div>
-                  <div><strong>ЕКЦ:</strong> <a href="tel:1414" className="hover:text-[var(--primary)] transition-colors">14-14</a></div>
-                  <div><strong>Республиканский:</strong> <a href="tel:3580" className="hover:text-[var(--primary)] transition-colors">3580</a></div>
-                  <div><strong className="text-[var(--primary)]">Телефон доверия:</strong> <a href="tel:1303" className="hover:text-[var(--primary)] transition-colors">13-03</a></div>
-                  <div><a href="tel:+77273765660" className="hover:text-[var(--primary)] transition-colors">Психиатрическая: +7 727 376-56-60</a></div>
-                  <div><a href="tel:+77273823462" className="hover:text-[var(--primary)] transition-colors">Наркологическая: +7 727 382-34-62</a></div>
-                  <div><a href="tel:+77474966420" className="hover:text-[var(--primary)] transition-colors">Детское отделение: 8 747 496 64 20</a></div>
-                  <div className="pt-2 border-t border-[var(--border-light)]">
-                    <a href="mailto:cpz.sekr@gmail.com" className="text-[var(--primary)] hover:underline text-sm">
+                <div className="space-y-1.5 text-xs text-[var(--text-secondary)]">
+                  <div className="flex justify-between items-center"><strong className="text-[var(--primary)] whitespace-nowrap">Телефон доверия:</strong> <a href="tel:1303" className="hover:text-[var(--primary)] font-bold transition-colors">13-03</a></div>
+                  <div className="flex justify-between items-center"><strong>ЕКЦ:</strong> <a href="tel:1414" className="hover:text-[var(--primary)] font-semibold transition-colors">14-14</a></div>
+                  <div className="flex justify-between items-center"><strong>Республиканский:</strong> <a href="tel:3580" className="hover:text-[var(--primary)] font-semibold transition-colors">3580</a></div>
+                  <div className="flex justify-between items-center text-[var(--text-muted)]">Психиатрическая: <a href="tel:+77273765660" className="hover:text-[var(--primary)] font-medium text-[var(--text-primary)] transition-colors">+7 727 376-56-60</a></div>
+                  <div className="flex justify-between items-center text-[var(--text-muted)]">Наркологическая: <a href="tel:+77273823462" className="hover:text-[var(--primary)] font-medium text-[var(--text-primary)] transition-colors">+7 727 382-34-62</a></div>
+                  <div className="flex justify-between items-center text-[var(--text-muted)]">Детское отделение: <a href="tel:+77474966420" className="hover:text-[var(--primary)] font-medium text-[var(--text-primary)] transition-colors">8 747 496 64 20</a></div>
+                  <div className="pt-2 mt-2 border-t border-[var(--border-light)] text-center">
+                    <a href="mailto:cpz.sekr@gmail.com" className="text-[var(--primary)] hover:underline font-medium">
                       cpz.sekr@gmail.com
                     </a>
                   </div>
