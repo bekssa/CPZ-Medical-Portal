@@ -32,9 +32,9 @@ const services = [
 
 export default function ServicesSection() {
     return (
-        <section className="bg-gray-50 py-10">
+        <section className="bg-gray-50 py-8 sm:py-10">
             <div className="max-w-7xl mx-auto px-4">
-                <h2 className="text-xl font-bold text-[var(--text-primary)] mb-6 flex items-center gap-2">
+                <h2 className="text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-6 flex items-center gap-2">
                     <span className="w-1 h-6 bg-[var(--primary)] rounded-full inline-block" />
                     Наши службы
                 </h2>
@@ -43,9 +43,9 @@ export default function ServicesSection() {
                         <a
                             key={service.href + service.title}
                             href={service.href}
-                            className={`group flex items-start gap-5 p-6 rounded-xl bg-gradient-to-br ${service.color} border ${service.border} hover:shadow-md transition-all duration-300 no-underline`}
+                            className={`group flex items-start gap-5 p-6 rounded-2xl bg-gradient-to-br ${service.color} border ${service.border} hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline`}
                         >
-                            <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-white flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+                            <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
                                 {service.icon}
                             </div>
                             <div className="flex-1">

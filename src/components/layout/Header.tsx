@@ -30,7 +30,7 @@ export default function Header({
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[var(--border)] h-[var(--header-height)]">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-[var(--border-light)] shadow-[var(--shadow-soft)] h-[var(--header-height)]">
             <div className="h-full max-w-full mx-auto px-4 flex items-center justify-between">
                 {/* Left: burger + logo */}
                 <div className="flex items-center gap-3">
@@ -88,7 +88,7 @@ export default function Header({
                             </svg>
                         </button>
                         {searchOpen && (
-                            <div className="absolute right-0 top-full mt-2 w-72 animate-fadeIn">
+                            <div className="absolute right-[-70px] sm:right-0 top-full mt-2 w-[calc(100vw-2rem)] sm:w-72 max-w-[320px] animate-fadeIn">
                                 <input
                                     type="text"
                                     placeholder={lang === 'KZ' ? 'Сайттан іздеу...' : 'Поиск по сайту...'}

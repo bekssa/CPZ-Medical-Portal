@@ -45,23 +45,24 @@ export default function HeroHeader() {
             </div>
 
             {/* Main header */}
-            <header className="bg-white border-b-4 border-[var(--primary)]">
-                <div className="max-w-7xl mx-auto px-4 py-6">
-                    <div className="flex items-start justify-between gap-6 flex-wrap">
+            <header className="bg-white relative z-40">
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary)]"></div>
+                <div className="max-w-7xl mx-auto px-4 py-4 sm:py-6">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
                         {/* Logo + Title */}
-                        <Link href={isKZ ? '/kz' : '/ru'} className="flex items-center gap-4 no-underline group">
-                            <div className="w-20 h-20 flex-shrink-0 group-hover:opacity-90 transition-opacity">
+                        <Link href={isKZ ? '/kz' : '/ru'} className="flex items-center gap-3 sm:gap-4 no-underline group w-full sm:w-auto">
+                            <div className="w-14 h-14 sm:w-20 sm:h-20 flex-shrink-0 group-hover:opacity-90 transition-opacity">
                                 <Image
                                     src="/images/logo-cpz.png"
                                     alt="Логотип ЦПЗ Алматы"
                                     width={80}
                                     height={80}
-                                    className="object-contain"
+                                    className="object-contain w-full h-full"
                                     priority
                                 />
                             </div>
                             <div>
-                                <div className="text-2xl font-bold text-[var(--text-primary)] tracking-tight leading-tight">
+                                <div className="text-lg sm:text-2xl font-bold text-[var(--text-primary)] tracking-tight leading-tight">
                                     {isKZ ? 'Психикалық Саулықтыру Орталығы' : 'Центр Психического Здоровья'}
                                 </div>
                                 <div className="text-sm text-[var(--text-muted)] mt-0.5">
@@ -102,7 +103,7 @@ export default function HeroHeader() {
                                             type="text"
                                             placeholder={isKZ ? 'Сайттан іздеу...' : 'Поиск по сайту...'}
                                             autoFocus
-                                            className="w-64 px-4 py-2 rounded-lg border border-[var(--border)] bg-white text-sm focus:outline-none focus:border-[var(--primary)] focus:ring-2 focus:ring-[var(--primary-light)] animate-fadeIn"
+                                            className="w-[140px] sm:w-64 px-3 sm:px-4 py-2 rounded-lg border border-[var(--border)] bg-white text-sm focus:outline-none focus:border-[var(--primary)] focus:ring-2 focus:ring-[var(--primary-light)] animate-fadeIn"
                                             onBlur={() => setSearchOpen(false)}
                                         />
                                     ) : (
@@ -147,10 +148,10 @@ export default function HeroHeader() {
             </header>
 
             {/* Navigation bar */}
-            <nav className="bg-[var(--primary)] shadow-md relative z-30">
+            <nav className="bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary)] shadow-[var(--shadow-soft)] relative z-30">
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Desktop nav */}
-                    <ul className="hidden md:flex items-center gap-0">
+                    <ul className="hidden md:flex flex-wrap items-center gap-0">
                         {currentNavigation.map((item) => (
                             <li key={item.href} className="group relative">
                                 <Link
@@ -161,7 +162,7 @@ export default function HeroHeader() {
                                 </Link>
                                 {/* Dropdown on hover */}
                                 {item.children && item.children.length > 0 && (
-                                    <div className="absolute top-full left-0 w-72 bg-white rounded-b-lg shadow-xl border border-[var(--border)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                    <div className="absolute top-full left-0 w-72 bg-white/95 backdrop-blur-md rounded-b-[var(--radius-lg)] shadow-[var(--shadow-hover)] border border-[var(--border-light)] border-t-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                                         {item.children.map((child) => (
                                             <Link
                                                 key={child.href}

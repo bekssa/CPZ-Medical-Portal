@@ -42,9 +42,9 @@ const links = [
 
 export default function UsefulLinks() {
     return (
-        <section className="bg-white py-8 border-t border-[var(--border-light)]">
+        <section className="bg-white py-6 sm:py-8 border-t border-[var(--border-light)]">
             <div className="max-w-7xl mx-auto px-4">
-                <h2 className="text-xl font-bold text-[var(--text-primary)] mb-5 flex items-center gap-2">
+                <h2 className="text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-5 flex items-center gap-2">
                     <span className="w-1 h-6 bg-[var(--primary)] rounded-full inline-block" />
                     Полезные ресурсы
                 </h2>

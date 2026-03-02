@@ -105,7 +105,7 @@ export default function HomePage() {
                     <Link
                       key={i}
                       href={item.href}
-                      className="group flex items-start gap-4 p-4 rounded-xl border border-[var(--border)] bg-white hover:border-[var(--primary)] hover:shadow-sm transition-all no-underline"
+                      className="group flex items-start gap-4 p-4 rounded-2xl border border-[var(--border)] bg-white hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
                     >
                       {/* News thumbnail */}
                       <div className="w-20 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
@@ -144,7 +144,7 @@ export default function HomePage() {
                     <Link
                       key={i}
                       href={item.href}
-                      className="group flex items-start gap-4 p-4 rounded-xl border border-[var(--border)] bg-white hover:border-[var(--primary)] hover:shadow-sm transition-all no-underline"
+                      className="group flex items-start gap-4 p-4 rounded-2xl border border-[var(--border)] bg-white hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
                     >
                       <div className="text-xs text-[var(--text-muted)] whitespace-nowrap pt-0.5 font-mono w-20 flex-shrink-0">
                         {item.date}
@@ -188,7 +188,7 @@ export default function HomePage() {
                 href="https://nac.kz/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-xl border border-[var(--border)] bg-white p-4 hover:shadow-md transition-shadow no-underline"
+                className="block rounded-2xl border border-[var(--border)] bg-white p-4 hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center flex-shrink-0 shadow-md">
@@ -209,7 +209,7 @@ export default function HomePage() {
               {/* GOBMP link */}
               <a
                 href="/patients/gobmp"
-                className="flex items-center gap-3 p-4 rounded-xl border border-[var(--border)] bg-white hover:border-[var(--primary)] hover:shadow-sm transition-all no-underline group"
+                className="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border)] bg-white hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline group"
               >
                 <div className="w-10 h-10 rounded-lg bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -230,7 +230,7 @@ export default function HomePage() {
                 href="https://almatydensaulyk.kz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-xl border border-[var(--border)] bg-white p-3 hover:shadow-md transition-shadow no-underline"
+                className="block rounded-2xl border border-[var(--border)] bg-white p-3 hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
               >
                 <Image
                   src="/images/badges/uzalmaty.png"
@@ -244,7 +244,7 @@ export default function HomePage() {
               {/* Call Center */}
               <a
                 href="tel:3000103"
-                className="block rounded-xl border-2 border-[var(--primary)] bg-white p-3 hover:shadow-md transition-shadow no-underline"
+                className="block rounded-2xl border-2 border-[var(--primary)] bg-white p-3 hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
               >
                 <Image
                   src="/images/badges/call-center.png"
@@ -296,7 +296,7 @@ export default function HomePage() {
               </div>
 
               {/* Contact card */}
-              <div className="p-5 rounded-xl border border-[var(--border)] bg-white">
+              <div className="p-5 rounded-2xl border border-[var(--border)] bg-white shadow-[var(--shadow-soft)]">
                 <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-[var(--primary)]">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" strokeWidth="1.5" />

@@ -46,7 +46,7 @@ export default function GovernmentTiles() {
                             href={tile.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative block rounded-xl overflow-hidden aspect-[4/3] no-underline shadow-sm hover:shadow-md transition-shadow"
+                            className="group relative block rounded-2xl overflow-hidden aspect-[4/3] no-underline shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300"
                         >
                             {/* Real image */}
                             <Image
