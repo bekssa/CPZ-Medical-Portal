@@ -35,22 +35,26 @@ const newsKz = [
 
 const announcementsKz = [
     {
-        date: '09.10.2023',
+        date: '09',
+        monthYear: '10/2023',
         title: 'ХАБАРЛАМА',
         href: '/kz/announcements/1',
     },
     {
-        date: '05.07.2023',
+        date: '05',
+        monthYear: '07/2023',
         title: 'Оқуға түсуге немесе жұмысқа тұруға 075/у нысанды медициналық анықтаманы қалай алуға болады.',
         href: '/kz/announcements/2',
     },
     {
-        date: '01.06.2023',
+        date: '01',
+        monthYear: '06/2023',
         title: '2023 жылы 1-маусымнан бастап МСҚ қатысты консультацияларды 1414, Qoldau 24/7, Telegram-бот',
         href: '/kz/announcements/3',
     },
     {
-        date: '03.05.2023',
+        date: '03',
+        monthYear: '05/2023',
         title: 'Жеңіс күніне арналған айлық аясында ашық есік күндері',
         href: '/kz/announcements/4',
     },
@@ -134,13 +138,16 @@ export default function KzPage() {
                                         <Link
                                             key={i}
                                             href={item.href}
-                                            className="group flex items-start gap-4 p-4 rounded-xl border border-[var(--border)] bg-white hover:border-[var(--primary)] hover:shadow-sm transition-all no-underline"
+                                            className="group flex gap-4 p-4 rounded-2xl border border-[var(--border)] bg-white hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
                                         >
-                                            <div className="text-xs text-[var(--text-muted)] whitespace-nowrap pt-0.5 font-mono w-20 flex-shrink-0">
-                                                {item.date}
+                                            <div className="flex flex-col flex-shrink-0 text-center items-center justify-center p-2 rounded-lg bg-[var(--bg)] border border-[var(--border)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors min-w-[70px]">
+                                                <span className="text-2xl font-bold leading-none mb-1 group-hover:text-white text-[var(--text-primary)]">{item.date}</span>
+                                                <span className="text-[10px] uppercase font-semibold text-[var(--text-muted)] group-hover:text-white/80">{item.monthYear}</span>
                                             </div>
-                                            <div className="text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors leading-relaxed">
-                                                {item.title}
+                                            <div className="flex-1 min-w-0 flex items-center">
+                                                <div className="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors leading-relaxed">
+                                                    {item.title}
+                                                </div>
                                             </div>
                                         </Link>
                                     ))}

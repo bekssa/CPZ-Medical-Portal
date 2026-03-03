@@ -1,0 +1,156 @@
+Starting Service Parser...
+Using local file: C:\NextProj\CPZ2\CPZ\cpzalmaty.kz\ru\psikhologicheskaya-sluzhba.html
+Found 11 departments for ЦЕНТР ПСИХИЧЕСКОГО ЗДОРОВЬЯ (ru)
+  Downloading 1 общепсихиатрическое мужское отделение...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/843-obshchepsikhiatricheskoe-muzhskoe-otdelenie: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading 2 общепсихиатрическое женское отделение...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/844-obshchepsikhiatricheskoe-zhenskoe-otdelenie: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading 3 общепсихиатрическое  мужское отделение...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/845-obshchepsikhiatricheskoe-muzhskoe-otdelenie-2: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading 4 общепсихиатрическое женское отделение...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/846-obshchepsikhiatricheskoe-zhenskoe-otdelenie-2: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading 5 детское психиатрическое отделение...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/847-detskoe-psikhiatricheskoe-otdelenie: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading 6 общепсихиатрическое мужское отделение...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/848-obshchepsikhiatricheskoe-muzhskoe-otdelenie-3: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading 7 отделение психосоматических расстройств...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/849-otdelenie-psikhosamaticheskikh-rasstrojstv: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Административно-хозяйственный отдел...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/850-administrativno-khozyajstvennyj-otdel: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Платное отделение...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/851-platnoe-otdelenie: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Приемный покой...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/852-priemnyj-pokoj: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Скорая помощь...
+    Error downloading https://cpzalmaty.kz/ru/psikhologicheskaya-sluzhba/853-skoraya-pomoshch: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+Created Main Service Page for psychiatric-service (ru)
+Fetching main service page from https://cpzalmaty.kz/kz/psikhologicheskaya-sluzhba
+Failed to fetch https://cpzalmaty.kz/kz/psikhologicheskaya-sluzhba
+Using local file: C:\NextProj\CPZ2\CPZ\cpzalmaty.kz\ru\narkologicheskaya-sluzhba.html
+Found 13 departments for ЦЕНТР ПСИХИЧЕСКОГО ЗДОРОВЬЯ (ru)
+  Downloading Отделение №1 мужское...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-1: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №2 женское...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-2: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №3 - мужское...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-3: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №4 - мужское...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-4: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №5...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-5: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №6 - временной адаптации и детоксикации...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-6: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №7 - мужское...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-7: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №8 - мужское...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-8: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №9 - реанимации и интенсивной терапии...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-10: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение №10 мужское...
+    Error downloading https://cpzalmaty.kz/ru/narkologicheskaya-sluzhba/107-otdelenie-10-muzhskoe: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Поликлиническое отделение...
+    Error downloading https://cpzalmaty.kz/ru/poliklinicheskoe-otdelenie: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение приемного покоя...
+    Error downloading https://cpzalmaty.kz/ru/otdelenie-priemnogo-pokoya: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+  Downloading Отделение оказания платных медицинских услуг...
+    Error downloading https://cpzalmaty.kz/ru/platnye-uslugi: TypeError: $ is not a function
+    at cleanHtmlContent (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:100:5)
+    at processService (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:205:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async run (file:///C:/NextProj/CPZ2/medical-portal/src/scripts/parse-services.mjs:321:9)
+Created Main Service Page for narcological-service (ru)
+Fetching main service page from https://cpzalmaty.kz/kz/narkologicheskaya-sluzhba
+Failed to fetch https://cpzalmaty.kz/kz/narkologicheskaya-sluzhba
+Done!

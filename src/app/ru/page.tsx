@@ -10,59 +10,65 @@ const news = [
   {
     date: '11.02.2026',
     title: 'Встреча руководителя Центра Рахменшеева С. с сотрудниками',
-    href: '/news/meeting-rahmengsheev',
+    href: '/ru/news/meeting-rahmengsheev',
     image: '/images/news/news1.jpg',
   },
   {
     date: '19.12.2025',
     title: 'Хорошая новость для застрахованных в ОСМС с 2026 года',
-    href: '/news/osms-2026-good',
+    href: '/ru/news/osms-2026-good',
     image: '/images/news/news2.jpg',
   },
   {
     date: '19.12.2025',
     title: '📢 Важная новость по ОСМС с 2026 года',
-    href: '/news/osms-2026-important',
+    href: '/ru/news/osms-2026-important',
     image: '/images/news/news3.jpg',
   },
   {
     date: '19.12.2025',
     title: 'С 1 января 2026 года вступает в силу обновленный перечень социально значимых заболеваний',
-    href: '/news/socially-significant-2026',
+    href: '/ru/news/socially-significant-2026',
     image: '/images/news/news1.jpg',
   },
 ];
 
 const announcements = [
   {
-    date: '24.07.2024',
+    date: '24',
+    monthYear: '07/2024',
     title: 'Лучевая диагностика Центра психического здоровья',
-    href: '/announcements/radiology',
+    href: '/ru/announcements/radiology',
   },
   {
-    date: '05.07.2024',
+    date: '05',
+    monthYear: '07/2024',
     title: 'Как получить справку формы 073/у для получения водительского удостоверения (шоферская комиссия)',
-    href: '/announcements/form-073',
+    href: '/ru/announcements/form-073',
   },
   {
-    date: '05.07.2024',
+    date: '05',
+    monthYear: '07/2024',
     title: 'Как и где получить справки от психиатра и нарколога формы 073/у, 75/у, 027/у, 028/у?',
-    href: '/announcements/psychiatrist-certificates',
+    href: '/ru/announcements/psychiatrist-certificates',
   },
   {
-    date: '09.10.2023',
+    date: '09',
+    monthYear: '10/2023',
     title: 'Уважаемые посетители!',
-    href: '/announcements/visitors-notice',
+    href: '/ru/announcements/visitors-notice',
   },
   {
-    date: '01.06.2023',
+    date: '01',
+    monthYear: '06/2023',
     title: 'ФСМС сообщает, что с 1 июня 2023 года все консультации 1414, Qoldau 24/7, Telegram-бот',
-    href: '/announcements/fsms-consulting',
+    href: '/ru/announcements/fsms-consulting',
   },
   {
-    date: '03.05.2023',
+    date: '03',
+    monthYear: '05/2023',
     title: 'Приглашаем всех на консультацию бесплатно и анонимно',
-    href: '/announcements/free-consultation',
+    href: '/ru/announcements/free-consultation',
   },
 ];
 
@@ -94,7 +100,7 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mb-5">
                   <h2 className="text-xl font-bold text-[var(--text-primary)]">Новости</h2>
                   <Link
-                    href="/news"
+                    href="/ru/news"
                     className="text-sm text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors no-underline font-medium"
                   >
                     Все новости →
@@ -133,7 +139,7 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mb-5">
                   <h2 className="text-xl font-bold text-[var(--text-primary)]">Объявления</h2>
                   <Link
-                    href="/announcements"
+                    href="/ru/announcements"
                     className="text-sm text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors no-underline font-medium"
                   >
                     Все объявления →
@@ -144,13 +150,16 @@ export default function HomePage() {
                     <Link
                       key={i}
                       href={item.href}
-                      className="group flex items-start gap-4 p-4 rounded-2xl border border-[var(--border)] bg-white hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
+                      className="group flex gap-4 p-4 rounded-2xl border border-[var(--border)] bg-white hover:border-transparent hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 transition-all duration-300 no-underline"
                     >
-                      <div className="text-xs text-[var(--text-muted)] whitespace-nowrap pt-0.5 font-mono w-20 flex-shrink-0">
-                        {item.date}
+                      <div className="flex flex-col flex-shrink-0 text-center items-center justify-center p-2 rounded-lg bg-[var(--bg)] border border-[var(--border)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors min-w-[70px]">
+                        <span className="text-2xl font-bold leading-none mb-1 group-hover:text-white text-[var(--text-primary)]">{item.date}</span>
+                        <span className="text-[10px] uppercase font-semibold text-[var(--text-muted)] group-hover:text-white/80">{item.monthYear}</span>
                       </div>
-                      <div className="text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors leading-relaxed">
-                        {item.title}
+                      <div className="flex-1 min-w-0 flex items-center">
+                        <div className="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors leading-relaxed">
+                          {item.title}
+                        </div>
                       </div>
                     </Link>
                   ))}

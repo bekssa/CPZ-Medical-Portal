@@ -1,0 +1,27 @@
+import Link from 'next/link';
+
+export default function Page() {
+  return (
+    <div className="bg-[var(--bg)] min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 py-10">
+        <nav className="text-sm text-[var(--text-muted)] mb-6 flex items-center gap-2 flex-wrap">
+          <Link href="/kz" className="hover:text-[var(--primary)] transition-colors no-underline">
+            Басты бет
+          </Link>
+          <span>/</span>
+          <span className="text-[var(--text-primary)] line-clamp-1">Гарантированный объем медицинской помощи</span>
+        </nav>
+
+        <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
+          <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
+            Гарантированный объем медицинской помощи
+          </h1>
+
+          <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
+            <div dangerouslySetInnerHTML={{ __html: `<p className="text-center py-10">Бұл бет сыртқы көзге сілтеме жасайды немесе әзірленуде.</p>` }} />
+          </div>
+        </article>
+      </div>
+    </div>
+  );
+}

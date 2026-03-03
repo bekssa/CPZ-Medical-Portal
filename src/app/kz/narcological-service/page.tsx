@@ -1,8 +1,27 @@
-export default function NarcologicalServicePage() {
+import Link from 'next/link';
+
+export default function Page() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Наркологиялық қызмет</h1>
-      <p className="text-gray-600">Бет әзірленуде...</p>
+    <div className="bg-[var(--bg)] min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 py-10">
+        <nav className="text-sm text-[var(--text-muted)] mb-6 flex items-center gap-2 flex-wrap">
+          <Link href="/kz" className="hover:text-[var(--primary)] transition-colors no-underline">
+            Басты бет
+          </Link>
+          <span>/</span>
+          <span className="text-[var(--text-primary)] line-clamp-1">Страница в разработке</span>
+        </nav>
+
+        <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
+          <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
+            Страница в разработке
+          </h1>
+
+          <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
+            <div dangerouslySetInnerHTML={{ __html: `<p className="text-center py-10">Ақпарат тасымалдануда.</p>` }} />
+          </div>
+        </article>
+      </div>
     </div>
-  )
+  );
 }

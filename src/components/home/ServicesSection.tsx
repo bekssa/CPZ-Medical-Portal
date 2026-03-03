@@ -1,9 +1,12 @@
 'use client';
 
-const services = [
+import { usePathname } from 'next/navigation';
+
+const servicesData = [
     {
-        title: 'Психиатрическая служба',
-        href: '/about',
+        titleRu: 'Психиатрическая служба',
+        titleKz: 'Психиатриялық қызмет',
+        hrefSuffix: '/psychological-service',
         description: 'Диагностика и лечение психических расстройств, консультации специалистов.',
         icon: (
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -16,8 +19,9 @@ const services = [
         border: 'border-[#00B7C6]/30',
     },
     {
-        title: 'Наркологическая служба',
-        href: '/about',
+        titleRu: 'Наркологическая служба',
+        titleKz: 'Наркологиялық қызмет',
+        hrefSuffix: '/narcological-service',
         description: 'Лечение зависимостей, реабилитация и социальная адаптация пациентов.',
         icon: (
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -31,12 +35,24 @@ const services = [
 ];
 
 export default function ServicesSection() {
+    const pathname = usePathname();
+    const locale = pathname.startsWith('/kz') ? 'kz' : 'ru';
+
+    const services = servicesData.map((s) => ({
+        title: locale === 'kz' ? s.titleKz : s.titleRu,
+        href: `/${locale}${s.hrefSuffix}`,
+        description: s.description,
+        icon: s.icon,
+        color: s.color,
+        border: s.border,
+    }));
+
     return (
         <section className="bg-gray-50 py-8 sm:py-10">
             <div className="max-w-7xl mx-auto px-4">
                 <h2 className="text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-6 flex items-center gap-2">
                     <span className="w-1 h-6 bg-[var(--primary)] rounded-full inline-block" />
-                    Наши службы
+                    {locale === 'kz' ? 'Біздің қызметтер' : 'Наши службы'}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {services.map((service) => (
@@ -56,7 +72,7 @@ export default function ServicesSection() {
                                     {service.description}
                                 </p>
                                 <span className="inline-flex items-center gap-1 text-sm text-[var(--primary)] font-medium group-hover:gap-2 transition-all">
-                                    Перейти в раздел
+                                    {locale === 'kz' ? 'Бөлімге өту' : 'Перейти в раздел'}
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                                         <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
