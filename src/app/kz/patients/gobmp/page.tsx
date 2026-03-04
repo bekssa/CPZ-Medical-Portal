@@ -9,16 +9,59 @@ export default function Page() {
             Басты бет
           </Link>
           <span>/</span>
-          <span className="text-[var(--text-primary)] line-clamp-1">Страница в разработке</span>
+          <span className="text-[var(--text-primary)] line-clamp-1">Новая модель ТМККК (гарантированный объём бесплатной медицинской помощи)</span>
         </nav>
 
         <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
           <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
-            Страница в разработке
+            Новая модель ТМККК (гарантированный объём бесплатной медицинской помощи)
           </h1>
 
           <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
-            <div dangerouslySetInnerHTML={{ __html: `<p className="text-center py-10">Ақпарат тасымалдануда.</p>` }} />
+            <div dangerouslySetInnerHTML={{ __html: `
+	<meta itemprop="inLanguage" content="ru-RU">
+	
+		
+			<div className="page-header">
+		<h2 itemprop="headline">
+			Новая модель ТМККК (гарантированный объём бесплатной медицинской помощи)		</h2>
+							</div>
+							
+
+			
+		
+						<dl className="article-info muted">
+
+		
+			<dt className="article-info-term">
+									Егжей-тегжейі							</dt>
+
+			
+			
+			
+			
+			
+		
+					
+			
+										<dd className="hits">
+					<span className="icon-eye-open" aria-hidden="true"></span>
+					<meta itemprop="interactionCount" content="UserPageVisits:2995">
+					Қаралды: 2995			</dd>						</dl>
+	
+	
+		
+								<div itemprop="articleBody">
+		<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p> 
+<!-- You can place html anywhere within the source tags --> 
+ 
+ 
+ 
+ 
+<br /> 
+</p></div>` }} />
           </div>
         </article>
       </div>

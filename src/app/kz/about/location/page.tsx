@@ -9,16 +9,16 @@ export default function Page() {
             Басты бет
           </Link>
           <span>/</span>
-          <span className="text-[var(--text-primary)] line-clamp-1">Как нас найти</span>
+          <span className="text-[var(--text-primary)] line-clamp-1">Бізді қалай табуға болады</span>
         </nav>
 
         <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
           <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
-            Как нас найти
+            Бізді қалай табуға болады
           </h1>
 
           <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
-            <div dangerouslySetInnerHTML={{ __html: `<p className="text-center py-10">Бұл бет сыртқы көзге сілтеме жасайды немесе әзірленуде.</p>` }} />
+            <div dangerouslySetInnerHTML={{ __html: `<p className="text-center py-10">Данная страница ссылается на внешний ресурс или находится в разработке.</p>` }} />
           </div>
         </article>
       </div>

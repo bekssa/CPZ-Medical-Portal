@@ -1,172 +1,149 @@
-import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'ЦЕНТР ПСИХИЧЕСКОГО ЗДОРОВЬЯ',
-};
-
-export default function ServicePage() {
-  const breadcrumbs = [
-    { label: 'Главная', href: '/ru' },
-    { label: 'ЦЕНТР ПСИХИЧЕСКОГО ЗДОРОВЬЯ', href: '#' },
-  ];
-
+export default function Page() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-5xl">
-      <Breadcrumbs items={breadcrumbs} className="mb-8" />
-      
-      <div className="mb-10 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 drop-shadow-sm">
-          ЦЕНТР ПСИХИЧЕСКОГО ЗДОРОВЬЯ
-        </h1>
-        <div className="w-24 h-1.5 bg-teal-500 mx-auto rounded-full mb-8"></div>
-      </div>
+    <div className="bg-[var(--bg)] min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 py-10">
+        <nav className="text-sm text-[var(--text-muted)] mb-6 flex items-center gap-2 flex-wrap">
+          <Link href="/ru" className="hover:text-[var(--primary)] transition-colors no-underline">
+            Главная
+          </Link>
+          <span>/</span>
+          <span className="text-[var(--text-primary)] line-clamp-1">Наркологическая служба</span>
+        </nav>
 
-      <div className="flex flex-col gap-4">
+        <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
+          <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
+            Наркологическая служба
+          </h1>
 
-        <Link 
-          href="/ru/narcological-service/otdelenie-1"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-teal-500 hover:bg-teal-600 text-white"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №1 мужское
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-2"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-white hover:bg-slate-50 text-slate-800 border border-slate-200"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №2 женское
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-3"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-teal-500 hover:bg-teal-600 text-white"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №3 - мужское
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-4"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-white hover:bg-slate-50 text-slate-800 border border-slate-200"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №4 - мужское
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-5"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-teal-500 hover:bg-teal-600 text-white"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №5
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-6"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-white hover:bg-slate-50 text-slate-800 border border-slate-200"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №6 - временной адаптации и детоксикации
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-7"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-teal-500 hover:bg-teal-600 text-white"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №7 - мужское
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-8"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-white hover:bg-slate-50 text-slate-800 border border-slate-200"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №8 - мужское
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-10"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-teal-500 hover:bg-teal-600 text-white"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №9 - реанимации и интенсивной терапии
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/107-otdelenie-10-muzhskoe"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-white hover:bg-slate-50 text-slate-800 border border-slate-200"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение №10 мужское
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/poliklinicheskoe-otdelenie"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-teal-500 hover:bg-teal-600 text-white"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Поликлиническое отделение
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/otdelenie-priemnogo-pokoya"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-white hover:bg-slate-50 text-slate-800 border border-slate-200"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение приемного покоя
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-        <Link 
-          href="/ru/narcological-service/platnye-uslugi"
-          className="group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md bg-teal-500 hover:bg-teal-600 text-white"
-        >
-          <span className="text-lg md:text-xl font-medium">
-            Отделение оказания платных медицинских услуг
-          </span>
-          <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
+          <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
+            <div dangerouslySetInnerHTML={{ __html: `
+										<div className="col-xs-3">
+								
+			
+	
+					</div>
+										<div className="col-xs-9">
+						<div id="news">
+							
+						</div>
+						<div id="system-message-container">
+	</div>
+
+						<div className="category-list list_style">
+
+<div>
+	<div className="content-category list_style">
+		
+					<h2>
+				Отделения Наркологической службы			</h2>
+				
+							
+				<form action="https://cpzalmaty.kz/ru/narkologicheskaya-sluzhba" method="post" name="adminForm" id="adminForm" className="form-inline">
+
+	<table className="category table table-striped table-bordered table-hover table-noheader">
+		<caption className="hide">Список материалов в категории Отделения Наркологической службы</caption>
+		<thead>
+			<tr>
+				<th scope="col" id="categorylist_header_title">
+					<a href="#" onclick="Joomla.tableOrdering('a.title','asc','', document.getElementById('adminForm'));return false;" className="hasPopover" title="Заголовок" data-content="Нажмите для сортировки по этому столбцу" data-placement="top">Заголовок</a>				</th>
+																											</tr>
+		</thead>
+		<tbody>
+									<tr className="cat-list-row0">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-1.html">
+						Отделение №1 мужское 					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row1">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-2.html">
+						Отделение №2 женское					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row0">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-3.html">
+						Отделение №3 - мужское					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row1">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-4.html">
+						Отделение №4 - мужское 					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row0">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-5.html">
+						Отделение №5					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row1">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-6.html">
+						Отделение №6 - временной адаптации и детоксикации					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row0">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-7.html">
+						Отделение №7 - мужское					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row1">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-8.html">
+						Отделение №8 - мужское					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row0">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-10.html">
+						Отделение №9 - реанимации и интенсивной терапии					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row1">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="narkologicheskaya-sluzhba/107-otdelenie-10-muzhskoe.html">
+						Отделение №10 мужское					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row0">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="poliklinicheskoe-otdelenie.html">
+						Поликлиническое отделение					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row1">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="otdelenie-priemnogo-pokoya.html">
+						Отделение приемного покоя 					</a>
+																								</td>
+																					</tr>
+									<tr className="cat-list-row0">
+						<td headers="categorylist_header_title" className="list-title">
+									<a href="platnye-uslugi.html">
+						 Отделение оказания платных медицинских услуг					</a>
+																								</td>
+																					</tr>
+				</tbody>
+	</table>
+
+
+	</form>
+
+			</div>
+</div>
+
+
+</div>
+											</div>
+									` }} />
+          </div>
+        </article>
       </div>
     </div>
   );

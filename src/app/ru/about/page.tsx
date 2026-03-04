@@ -2,48 +2,62 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Link from 'next/link';
 
 const subpages = [
-    { title: 'Миссия, Цель и Ценности', href: '/about/mission', description: 'Основные принципы и направления деятельности центра' },
-    { title: 'Администрация', href: '/about/administration', description: 'Руководство центра психического здоровья' },
-    { title: 'Как нас найти', href: '/about/location', description: 'Адрес и маршрут до центра' },
-    { title: 'Наблюдательный совет', href: '/about/supervisory-board', description: 'Состав и деятельность наблюдательного совета' },
-    { title: 'Стратегический план', href: '/about/strategic-plan', description: 'Стратегическое развитие центра' },
-    { title: 'Этический кодекс', href: '/about/ethics-code', description: 'Кодекс этики и поведения сотрудников' },
-    { title: 'Противодействие коррупции', href: '/about/anti-corruption', description: 'Антикоррупционная политика' },
-    { title: 'Устав', href: '/about/charter', description: 'Устав предприятия' },
-    { title: 'Аналитический обзор', href: '/about/analytics', description: 'Аналитические материалы и обзоры' },
-    { title: 'Государственные закупки', href: '/about/procurement', description: 'Объявления, протоколы вскрытия и итогов' },
+    { title: 'Миссия, Цель и Ценности', href: '/ru/about/mission', description: 'Основные принципы и направления деятельности центра' },
+    { title: 'Администрация', href: '/ru/about/administration', description: 'Руководство центра психического здоровья' },
+    { title: 'Как нас найти', href: '/ru/about/location', description: 'Адрес и маршрут до центра' },
+    { title: 'Наблюдательный совет', href: '/ru/about/supervisory-board', description: 'Состав и деятельность наблюдательного совета' },
+    { title: 'Стратегический план', href: '/ru/about/strategic-plan', description: 'Стратегическое развитие центра' },
+    { title: 'Этический кодекс', href: '/ru/about/ethics-code', description: 'Кодекс этики и поведения сотрудников' },
+    { title: 'Противодействие коррупции', href: '/ru/about/anti-corruption', description: 'Антикоррупционная политика' },
+    { title: 'Устав', href: '/ru/about/charter', description: 'Устав предприятия' },
+    { title: 'Аналитический обзор', href: '/ru/about/analytical-review', description: 'Аналитические материалы и обзоры' },
+    { title: 'Объявления госзакупок', href: '/ru/about/procurement-announcements', description: 'Объявления о государственных закупках' },
+    { title: 'Протоколы вскрытия', href: '/ru/about/procurement-opening', description: 'Протоколы вскрытия государственных закупок' },
+    { title: 'Протоколы итогов', href: '/ru/about/procurement-results', description: 'Протоколы итогов государственных закупок' },
 ];
 
 export default function AboutPage() {
     return (
-        <div className="animate-fadeIn">
+        <div className="animate-fadeIn pb-10">
             <Breadcrumbs />
-            <div className="article-content">
-                <h1>О центре</h1>
-                <p>
-                    Центр Психического Здоровья города Алматы — государственное предприятие на праве хозяйственного ведения,
-                    осуществляющее деятельность по оказанию психиатрической и наркологической помощи населению города Алматы.
-                </p>
-                <p>
-                    Основными задачами центра являются оказание специализированной психиатрической и наркологической помощи
-                    населению, профилактика психических расстройств и расстройств, связанных с употреблением психоактивных веществ,
-                    реабилитация лиц с психическими и поведенческими расстройствами.
-                </p>
-            </div>
+            <div className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
+                <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
+                    О центре
+                </h1>
 
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {subpages.map((page) => (
-                    <Link
-                        key={page.href}
-                        href={page.href}
-                        className="group p-4 rounded-xl border border-[var(--border)] bg-white hover:border-[var(--primary)] hover:shadow-sm transition-all no-underline"
-                    >
-                        <div className="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">
-                            {page.title}
-                        </div>
-                        <div className="text-xs text-[var(--text-muted)] mt-1">{page.description}</div>
-                    </Link>
-                ))}
+                <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose mb-10">
+                    <h2 className="text-xl font-semibold mb-4 text-[var(--text-primary)]">История центра</h2>
+                    <p>В Казахстане первые психиатрические больницы были открыты в городе Уральске в 1861 году на 10 коек и в том же году в Джамбейтинском районе на 6 коек при русских военных госпиталях. В городе Верном (Алма-Ата) 14 декабря 1896 года за счет земских денежных сборов было развернуто 10 кроватей для лечения душевно больных.</p>
+                    <p>Психиатрическая служба города Алматы была организована в 1939 году.<br />Первыми участковыми психиатрами в городе были врачи Шаталова З.В., Смирнова Н., Буханцева Н.Я.</p>
+                    <p> В Алма-Атинской психиатрической больнице детское отделение открылось в 1949 году.</p>
+                    <p> Первый психиатрический кабинет был открыт при районных поликлиниках № 6 Фрунзенского и № 2 Советского районов. В 1953 г. был открыт городской психиатрический диспансер. Он находился на улице Зенькова (бывш. ул. Пролетарская) 33, угол ул. Богенбай батыра (бывш. ул. Кирова), который состоял из 3 маленьких домиков. В первом доме был развернут стационар на 60 коек, во втором было взрослое диспансерное отделение, а в третьем – детское диспансерное отделение. Главным врачом была Буханцева Нина Яковлевна.</p>
+                    <p>В 1973 году было построено настоящее здание диспансера на каменистом, неосвоенном участке общей площадью 3 га, работы по благоустройству велись в трудных условиях. Специально для озеленения был принят на работу садовник Ушетов А., которого пригласили из Киргизии. С 1973 года главным врачом стал Губашев Мендеш Шавхатович.</p>
+                    <p>В больнице располагались взрослое и детско-подростковое диспансеры, а также стационарные отделения. С первых дней работы клинического диспансера в отдельном 3-этажном здании разместились дневной стационар на 100 больных, которые проходили реабилитацию в республиканских лечебно-трудовых мастерских. Развернуты швейные и картонажные цеха на 70 рабочих мест, этикеточный, столярный и пластмассовый цеха на 25-30 рабочих мест.</p>
+                    <p>В 1973 году коечная мощность была увеличена до 300 коек. Большое внимание уделялось передовым технологиям усовершенствования труда, был открыт диктофонный центр.</p>
+                    <p>С 1979 года АГ ЦПЗ является школой передового опыта для психиатрических организаций республики...</p>
+                    <p>В марте 2014 года Центр поменял форму собственности и перешел на право хозяйственного ведения.</p>
+                    <p>С декабря 2016 года директором Центра был назначен Абесов Шайхасан Коккозович.</p>
+                    <p>С января 2018 года директором ГКП на ПХВ «Центр психического здоровья» является Рахменшеев Сапар Куттыбаевич.</p>
+                    <p>Таким образом, ГКП на ПХВ «Центр психического здоровья» г. Алматы оказывает всю необходимую врачебную, социально-правовую, социально-трудовую и реабилитационную помощь пациентам, страдающих психическими расстройствами, находящимся под наблюдением нашего учреждения.</p>
+                </div>
+
+                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-6">Разделы Центра</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {subpages.map((page) => (
+                        <Link
+                            key={page.href}
+                            href={page.href}
+                            className="group p-5 rounded-xl border border-[var(--border)] bg-gray-50/50 hover:bg-white hover:border-[var(--primary)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all no-underline flex flex-col h-full"
+                        >
+                            <div className="font-semibold text-lg text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors mb-2">
+                                {page.title}
+                            </div>
+                            <div className="text-sm text-[var(--text-muted)] line-clamp-2">
+                                {page.description}
+                            </div>
+                        </Link>
+                    ))}
+                </div>
             </div>
         </div>
     );
