@@ -1,27 +1,126 @@
-import Link from 'next/link';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
-export default function Page() {
+const npaDocuments = [
+  { number: 1, title: 'Қазақстан Республикасының Конституциясы', description: '1995 жылғы 30 тамызда республикалық референдумда қабылданған.' },
+  { number: 2, title: 'Құқықтық актілер туралы', description: 'Қазақстан Республикасының 2016 жылғы 6 сәуірдегі № 480-V ЗРҚ Заңы.' },
+  { number: 3, title: 'Мемлекеттік қызметтер туралы', description: 'Қазақстан Республикасының 2013 жылғы 15 сәуірдегі № 88-V Заңы.' },
+  { number: 4, title: 'Қазақстан Республикасының ұлттық қауіпсіздігі туралы', description: 'Қазақстан Республикасының 2012 жылғы 6 қаңтардағы № 527-IV Заңы.' },
+  { number: 5, title: 'Мемлекеттік құпиялар туралы', description: 'Қазақстан Республикасының 1999 жылғы 15 наурыздағы N 349-1 Заңы.' },
+  { number: 6, title: 'Тегін медициналық көмектің кепілдік берілген көлемінің тізбесін бекіту туралы', description: 'ҚР Үкіметінің 2020 жылғы 16 қазандағы № 672 қаулысы.', href: 'https://adilet.zan.kz/kaz/docs/P2000000672' },
+  { number: 7, title: 'ҚР Үкіметінің 2019 жылғы 20 маусымдағы № 421 қаулысына өзгерістер енгізу туралы', description: 'ҚР Үкіметінің 2020 жылғы 16 қазандағы № 673 қаулысы.', href: 'https://adilet.zan.kz/kaz/docs/P2000000673' },
+  { number: 8, title: 'Халық денсаулығы және денсаулық сақтау жүйесі туралы', description: 'Қазақстан Республикасының 2020 жылғы 7 шілдедегі № 360-VI ЗРҚ Кодексі.', href: 'https://adilet.zan.kz/kaz/docs/K2000000360' },
+  { number: 9, title: 'Денсаулық сақтау саласындағы есептік құжаттама нысандарын бекіту туралы', description: 'ҚР ДСМ м.а. 2020 жылғы 30 қазандағы № ҚР ДСМ-175/2020 бұйрығы. Тіркелген № 21579.', href: 'https://adilet.zan.kz/kaz/docs/V2000021579' },
+  { number: 10, title: 'Мемлекеттік қызметтер тізілімін бекіту туралы', description: 'ҚР ЦДИАӨМ м.а. 2020 жылғы 31 қаңтардағы № 39/НҚ бұйрығы. Тіркелген № 19982.' },
+  { number: 11, title: 'Міндетті медициналық тексеруден өтуге тиіс адамдардың мақсатты топтарын бекіту туралы', description: 'ҚР ДСМ м.а. 2020 жылғы 15 қазандағы № ҚР ДСМ-131/2020 бұйрығы. Тіркелген № 21443.', href: 'https://adilet.zan.kz/kaz/docs/V2000021443' },
+  { number: 12, title: 'Денсаулық сақтау субъектілерінің ақылы қызметтер көрсету қағидаларын бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 29 қазандағы № ҚР ДСМ-170/2020 бұйрығы. Тіркелген № 21559.', href: 'https://adilet.zan.kz/kaz/docs/V2000021559' },
+  { number: 13, title: 'Кәсіптік қызметтің жекелеген түрлерін жүзеге асыруға арналған медициналық психиатриялық қарсы көрсетілімдер тізбесін бекіту туралы', description: 'ҚР ДСӘДМ 2015 жылғы 31 наурыздағы № 188 бұйрығы. Тіркелген № 10858.' },
+  { number: 14, title: 'Адамдарға көлік құралдарын басқаруға тыйым салынатын медициналық қарсы көрсетілімдер тізбесін бекіту туралы', description: 'ҚР ДСӘДМ 2015 жылғы 9 қарашадағы № 853 бұйрығы. Тіркелген № 12365.' },
+  { number: 15, title: 'Көлік құралдарын басқару құқығын алуға үміткер адамдарды медициналық тексеруден өткізу қағидаларын бекіту туралы', description: 'ҚР ДСМ м.а. 2020 жылғы 30 қазандағы № ҚР ДСМ-172/2020 бұйрығы. Тіркелген № 21557.', href: 'https://adilet.zan.kz/kaz/docs/V2000021557' },
+  { number: 16, title: 'Халықтың психикалық денсаулығы саласындағы медициналық-әлеуметтік көмек көрсетуді ұйымдастыру стандартын бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 30 қарашадағы № ҚР ДСМ-224/2020 бұйрығы. Тіркелген № 21712.' },
+  { number: 17, title: 'Психикалық денсаулық саласындағы медициналық-әлеуметтік көмек көрсетудің кейбір мәселелері туралы', description: 'ҚР ДСМ 2020 жылғы 25 қарашадағы № ҚР ДСМ-203/2020 бұйрығы. Тіркелген № 21680.' },
+  { number: 18, title: 'Алғашқы медициналық құжаттаманы жүргізу және есептер беру қағидаларын бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 10 желтоқсандағы № ҚР ДСМ-244/2020 бұйрығы. Тіркелген № 21761.' },
+  { number: 19, title: 'Психикалық, мінез-құлық бұзылыстары бар адамдарға арналған ішкі тәртіп қағидаларын бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 8 желтоқсандағы № ҚР ДСМ-237/2020 бұйрығы. Тіркелген № 21747.' },
+  { number: 20, title: 'Санитариялық-эпидемияға қарсы және санитариялық-профилактикалық іс-шараларды ұйымдастыру мен жүргізудің кейбір мәселелері туралы', description: 'ҚР ДСМ 2020 жылғы 5 шілдедегі № ҚР ДСМ-78/2020 бұйрығы. Тіркелген № 20935.', href: 'https://adilet.zan.kz/kaz/docs/V2000020935' },
+  { number: 21, title: '«Денсаулық сақтау объектілеріне қойылатын санитариялық-эпидемиологиялық талаптар» Санитариялық қағидаларын бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 11 тамыздағы № ҚР ДСМ-96/2020 бұйрығы. Тіркелген № 21080.' },
+  { number: 22, title: 'Алғашқы көмек көрсетуге арналған дәрі-дәрмек жинағының құрамын бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 8 қазандағы № ҚР ДСМ-118/2020 бұйрығы. Тіркелген № 21399.', href: 'https://adilet.zan.kz/kaz/docs/V2000021399' },
+  { number: 23, title: 'Қоршаған орта үшін қауіп төндіретін аурулар тізбесін бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 9 қазандағы № ҚР ДСМ-121/2020 бұйрығы. Тіркелген № 21407.', href: 'https://adilet.zan.kz/kaz/docs/V2000021407' },
+  { number: 24, title: 'Дәрігерге дейінгі медициналық көмек көрсету қағидаларын бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 30 қарашадағы № ҚР ДСМ-223/2020 бұйрығы. Тіркелген № 21721.', href: 'https://adilet.zan.kz/kaz/docs/V2000021721' },
+  { number: 25, title: 'Медициналық сипаттағы мәжбүрлеу шарасын қолдану қағидаларын бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 15 желтоқсандағы № ҚР ДСМ-262/2020 бұйрығы. Тіркелген № 21810.', href: 'https://adilet.zan.kz/kaz/docs/V2000021810' },
+  { number: 26, title: 'Қазақстан Республикасы медицина және фармацевтика қызметкерлерінің Ар-намыс кодексін бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 23 желтоқсандағы № ҚР ДСМ-319/2020 бұйрығы. Тіркелген № 21890.' },
+  { number: 27, title: 'Азаматтық және қызметтік қару, азаматтық пиротехникалық заттар айналымы салаларында рұқсат алу үшін медициналық қарсы көрсетілімдер тізбесін бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 25 қарашадағы № ҚР ДСМ-206/2020 бұйрығы. Тіркелген № 21681.' },
+  { number: 28, title: 'Әлеуметтік маңызы бар аурулар тізбесін бекіту туралы', description: 'ҚР ДСМ 2020 жылғы 23 қыркүйектегі № ҚР ДСМ-108/2020 бұйрығы. Тіркелген № 21263.', href: 'https://adilet.zan.kz/kaz/docs/V2000021263' },
+  { number: 29, title: 'Денсаулық сақтау саласындағы мемлекеттік қызметтер көрсетудің кейбір мәселелері туралы', description: 'ҚР ДСМ 2020 жылғы 18 мамырдағы № ҚР ДСМ-49/2020 бұйрығы. Тіркелген № 20665.' },
+  { number: 30, title: 'Мемлекеттік қызметтер көрсету сапасын мемлекеттік бақылау қағидаларын бекіту туралы', description: 'ҚР МҚА Төрағасының 2016 жылғы 8 желтоқсандағы № 78 бұйрығы. Тіркелген № 14740.' },
+  { number: 31, title: 'Шетелдіктер мен азаматтығы жоқ адамдардың ҚР-на кіруіне тыйым салатын аурулар тізбесін бекіту туралы', description: 'ҚР ДСМ 2011 жылғы 30 қыркүйектегі № 664 бұйрығы. Тіркелген № 7274.' },
+  { number: 32, title: 'Әлеуметтік маңызы бар аурулармен ауыратын азаматтарға көрсетілетін медициналық-әлеуметтік көмек көрсету қағидаларын бекіту туралы', description: 'ҚР ДСӘДМ 2015 жылғы 28 сәуірдегі № 285 бұйрығы. Тіркелген № 11226.' },
+  { number: 33, title: 'ҚР ДСМ 2011 жылғы 30 қыркүйектегі № 665 бұйрығына өзгерістер енгізу туралы', description: 'ҚР ДСМ м.а. 2021 жылғы 6 тамыздағы № ҚР ДСМ-78 бұйрығы.' },
+  { number: 34, title: 'Қашықтықтан медициналық қызметтер көрсетуді ұйымдастыру, ұсыну және ақы төлеу қағидаларын бекіту туралы', description: 'ҚР ДСМ 2021 жылғы 1 ақпандағы № ҚР ДСМ-12 бұйрығы. Тіркелген № 22151.' },
+  { number: 35, title: 'Азаматтық және қызметтік қару айналымы салаларында рұқсат алу үшін медициналық тексеруден өту қағидаларын бекіту туралы', description: 'ҚР ДСМ 2023 жылғы 31 қаңтардағы № 19 бұйрығы. Тіркелген № 31821.' },
+  { number: 36, title: 'ҚР ДСМ 2020 жылғы 25 қарашадағы № ҚР ДСМ-206/2020 бұйрығына өзгеріс енгізу туралы', description: 'ҚР ДСМ 2023 жылғы 26 қаңтардағы № 17 бұйрығы. Тіркелген № 31794.' },
+  { number: 37, title: 'Тегін және (немесе) жеңілдікті амбулаториялық қамтамасыз ету үшін дәрілік заттар мен медициналық бұйымдар тізбесін бекіту туралы', description: 'ҚР ДСМ 2021 жылғы 5 тамыздағы № ҚР ДСМ-75 бұйрығы. Тіркелген № 23885.' },
+  { number: 38, title: 'ҚР ДСМ м.а. 2020 жылғы 30 қазандағы № ҚР ДСМ-175/2020 бұйрығына өзгеріс енгізу туралы', description: 'ҚР ДСМ 2023 жылғы 24 қаңтардағы № 13 бұйрығы. Тіркелген № 31763.' },
+];
+
+const additionalLinks = [
+  { title: 'Қазақстан Республикасының «Мемлекеттік қызметтер туралы» Заңы', href: 'https://adilet.zan.kz/kaz/docs/Z010000148_' },
+  { title: 'Мемлекеттік қызметтер тізілімін бекіту туралы', href: 'https://adilet.zan.kz/kaz/docs/V2000020665#z0' },
+  { title: 'Денсаулық сақтау саласындағы мемлекеттік қызметтер көрсетудің кейбір мәселелері туралы', href: 'https://adilet.zan.kz/kaz/docs/V2000020665#z0' },
+  { title: 'Мемлекеттік қызметтер көрсету сапасын мемлекеттік бақылау қағидаларын бекіту туралы', href: 'https://adilet.zan.kz/kaz/docs/V1600014740#5' },
+  { title: 'Стационарлық көмек көрсету қағидаларын бекіту туралы', href: 'https://adilet.zan.kz/kaz/docs/V1500012204' },
+  { title: 'Жеке тұлғаларды денсаулық сақтау ұйымдарына бекіту қағидаларын бекіту туралы', href: 'https://adilet.zan.kz/kaz/docs/V2000021642' },
+  { title: 'Уақытша еңбекке жарамсыздық сараптамасын жүргізу қағидаларын бекіту туралы', href: 'https://adilet.zan.kz/kaz/docs/V2000021660' },
+  { title: 'Жедел медициналық көмек көрсету қағидаларын бекіту туралы', href: 'https://adilet.zan.kz/kaz/docs/V2000021713#z294' },
+];
+
+export default function NpaPage() {
   return (
-    <div className="bg-[var(--bg)] min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 py-10">
-        <nav className="text-sm text-[var(--text-muted)] mb-6 flex items-center gap-2 flex-wrap">
-          <Link href="/kz" className="hover:text-[var(--primary)] transition-colors no-underline">
-            Басты бет
-          </Link>
-          <span>/</span>
-          <span className="text-[var(--text-primary)] line-clamp-1">Страница в разработке</span>
-        </nav>
+    <div className="animate-fadeIn pb-10">
+      <Breadcrumbs />
+      <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
+        <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
+          Мемлекеттік қызметтер бойынша НҚА
+        </h1>
 
-        <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
-          <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
-            Страница в разработке
-          </h1>
+        <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-relaxed">
+          <div className="space-y-3">
+            {npaDocuments.map((doc) => {
+              const content = (
+                <div className="flex gap-3 items-start">
+                  <span className="shrink-0 w-8 h-8 rounded-lg bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center text-sm font-bold">
+                    {doc.number}
+                  </span>
+                  <div>
+                    <div className={`font-medium text-[var(--text-primary)] ${doc.href ? 'group-hover:text-[var(--primary)]' : ''} transition-colors`}>
+                      {doc.title}
+                    </div>
+                    <div className="text-sm text-[var(--text-muted)] mt-0.5">{doc.description}</div>
+                  </div>
+                </div>
+              );
 
-          <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
-            <div dangerouslySetInnerHTML={{ __html: `<p className="text-center py-10">Ақпарат тасымалдануда.</p>` }} />
+              if (doc.href) {
+                return (
+                  <a
+                    key={doc.number}
+                    href={doc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block p-3 rounded-xl border border-[var(--border)] hover:border-[var(--primary)] hover:shadow-sm transition-all no-underline"
+                  >
+                    {content}
+                  </a>
+                );
+              }
+
+              return (
+                <div key={doc.number} className="p-3 rounded-xl border border-[var(--border)]">
+                  {content}
+                </div>
+              );
+            })}
           </div>
-        </article>
-      </div>
+
+          <h2 className="text-xl font-bold text-[var(--text-primary)] mt-10 mb-4 pb-3 border-b border-[var(--border-light)]">
+            Қосымша сілтемелер
+          </h2>
+          <div className="space-y-2">
+            {additionalLinks.map((link, i) => (
+              <a
+                key={i}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 p-3 rounded-xl border border-[var(--border)] hover:border-[var(--primary)] hover:shadow-sm transition-all no-underline"
+              >
+                <span className="text-[var(--primary)] text-lg shrink-0">🔗</span>
+                <span className="font-medium text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors text-sm">
+                  {link.title}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </article>
     </div>
   );
 }

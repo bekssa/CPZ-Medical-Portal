@@ -55,7 +55,7 @@ export default function Page() {
 		<p >&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p ><strong><span ><img src="../../images/strateg_plan.jpg" alt="strateg plan.jpg" width="1126" height="766" /></span></strong></p>
+<p ><strong><span ><img src="/images/old/strateg_plan.jpg" alt="strateg plan.jpg" width="1126" height="766" /></span></strong></p>
 <p ><strong><span >Раздел 1. Миссия Центра:</span></strong></p>
 <p ><strong><span >Миссия ГКП на ПХВ "ЦПЗ": </span></strong><span >Обеспечение психиатрической, наркологической помощи с высоким качеством и&nbsp;&nbsp; общей доступностью.</span></p>
 <p ><strong><span >Видение: </span></strong><span >стать современным медицинским предприятием, соответствующим спросу населения, </span></p>

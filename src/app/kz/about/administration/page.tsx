@@ -54,7 +54,7 @@ export default function Page() {
 								<div itemprop="articleBody">
 		<center>
 <div >
-<h4 className="class1"><img src="../../images/GZ/protokol_vsk_page-0001.jpg" alt="protokol vsk page 0001" /><img src="../../images/GZ/protokol_vsk_page-0002.jpg" alt="protokol vsk page 0002" /><img src="../../images/GZ/protokol_vsk_page-0003.jpg" alt="protokol vsk page 0003" />&nbsp;</h4>
+<h4 className="class1"><img src="/images/old/GZ/protokol_vsk_page-0001.jpg" alt="protokol vsk page 0001" /><img src="/images/old/GZ/protokol_vsk_page-0002.jpg" alt="protokol vsk page 0002" /><img src="/images/old/GZ/protokol_vsk_page-0003.jpg" alt="protokol vsk page 0003" />&nbsp;</h4>
 </div>
 </center> 	</div>
 

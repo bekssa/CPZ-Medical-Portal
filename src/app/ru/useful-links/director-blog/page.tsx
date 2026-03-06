@@ -52,7 +52,7 @@ export default function Page() {
 	
 		
 								<div itemprop="articleBody">
-		<p ><img src="../../images/007.png" alt="007.png" /></p>
+		<p ><img src="/images/old/007.png" alt="007.png" /></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p ><strong><em>Уважаемые посетители сайта!</em></strong></p>

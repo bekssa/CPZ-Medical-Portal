@@ -2,10 +2,10 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Link from 'next/link';
 
 const subpages = [
-    { title: 'Реестр государственных услуг', href: '/ru/services/register', description: 'Перечень государственных услуг, оказываемых центром' },
-    { title: 'Стандарты государственных услуг', href: '/ru/services/standards', description: 'Стандарты оказания медицинских и государственных услуг' },
-    { title: 'НПА по государственным услугам', href: '/ru/services/npa', description: 'Нормативные правовые акты, регулирующие оказание государственных услуг' },
-    { title: 'Отчеты по государственным услугам', href: '/ru/services/reports', description: 'Отчёты о деятельности по оказанию государственных услуг' },
+    { title: 'Мемлекеттік қызметтер тізілімі', href: '/kz/services/register', description: 'Орталық көрсететін мемлекеттік қызметтер тізбесі' },
+    { title: 'Мемлекеттік қызметтер стандарттары', href: '/kz/services/standards', description: 'Медициналық және мемлекеттік қызметтер көрсету стандарттары' },
+    { title: 'Мемлекеттік қызметтер бойынша НҚА', href: '/kz/services/npa', description: 'Мемлекеттік қызметтер көрсетуді реттейтін нормативтік құқықтық актілер' },
+    { title: 'Мемлекеттік қызметтер бойынша есептер', href: '/kz/services/reports', description: 'Мемлекеттік қызметтер көрсету жөніндегі қызмет туралы есептер' },
 ];
 
 export default function ServicesPage() {
@@ -14,13 +14,13 @@ export default function ServicesPage() {
             <Breadcrumbs />
             <div className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
                 <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
-                    Государственные услуги
+                    Мемлекеттік қызметтер
                 </h1>
 
                 <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose mb-10">
                     <p>
-                        Информация о государственных услугах, оказываемых Центром психического здоровья города Алматы.
-                        Здесь представлены реестры, стандарты, нормативные акты и отчётность по оказанию услуг населению.
+                        Алматы қаласы Психикалық денсаулық орталығы көрсететін мемлекеттік қызметтер туралы ақпарат.
+                        Мұнда тізілімдер, стандарттар, нормативтік актілер және халыққа қызмет көрсету бойынша есептілік берілген.
                     </p>
                 </div>
 

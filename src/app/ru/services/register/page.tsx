@@ -1,68 +1,40 @@
-import Link from 'next/link';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
-export default function Page() {
+export default function RegisterPage() {
   return (
-    <div className="bg-[var(--bg)] min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 py-10">
-        <nav className="text-sm text-[var(--text-muted)] mb-6 flex items-center gap-2 flex-wrap">
-          <Link href="/ru" className="hover:text-[var(--primary)] transition-colors no-underline">
-            Главная
-          </Link>
-          <span>/</span>
-          <span className="text-[var(--text-primary)] line-clamp-1">Реестр государственных услуг</span>
-        </nav>
+    <div className="animate-fadeIn pb-10">
+      <Breadcrumbs />
+      <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
+        <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
+          Реестр государственных услуг
+        </h1>
 
-        <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
-          <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
-            Реестр государственных услуг
-          </h1>
+        <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-relaxed">
+          <p>
+            Реестр государственных услуг утверждён приказом и.о. Министра цифрового развития, инноваций и
+            аэрокосмической промышленности Республики Казахстан.
+          </p>
 
-          <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
-            <div dangerouslySetInnerHTML={{ __html: `
-	<meta itemprop="inLanguage" content="ru-RU">
-	
-		
-			<div className="page-header">
-		<h2 itemprop="headline">
-			Реестр государственных услуг		</h2>
-							</div>
-							
-
-			
-		
-						<dl className="article-info muted">
-
-		
-			<dt className="article-info-term">
-									Подробности							</dt>
-
-			
-			
-			
-			
-			
-		
-					
-			
-										<dd className="hits">
-					<span className="icon-eye-open" aria-hidden="true"></span>
-					<meta itemprop="interactionCount" content="UserPageVisits:8436">
-					Просмотров: 8436			</dd>						</dl>
-	
-	
-		
-								<div itemprop="articleBody">
-		<p ><strong><span ></span></strong></p>
-<p >&nbsp;</p>
-<h1 ><a href="../../../adilet.zan.kz/rus/docs/V2000019982.html">Об утверждении реестра государственных услуг</a></h1>
-<p ><strong><span >&nbsp;можно скачать здесь!<br /></span></strong></p>
-<p ><a href="../../../adilet.zan.kz/rus/docs/P1300000983.html"></a></p> 	</div>
-
-	
-							` }} />
+          <div className="mt-6 space-y-4">
+            <a
+              href="https://adilet.zan.kz/rus/docs/V2000019982"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-start gap-3 p-4 rounded-xl border border-[var(--border)] hover:border-[var(--primary)] hover:shadow-sm transition-all no-underline"
+            >
+              <span className="mt-0.5 text-[var(--primary)] text-lg shrink-0">📄</span>
+              <div>
+                <div className="font-medium text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">
+                  Об утверждении реестра государственных услуг
+                </div>
+                <div className="text-sm text-[var(--text-muted)] mt-1">
+                  Приказ от 31 января 2020 года № 39/НҚ — adilet.zan.kz
+                </div>
+              </div>
+            </a>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   );
 }

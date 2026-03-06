@@ -53,8 +53,8 @@ export default function Page() {
 		
 								<div itemprop="articleBody">
 		<p>&nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="../../images/galerey/grafik_psih.png" alt="" width="1086" height="927" /></p>
-<p><img src="../../images/BNDO.jpg" alt="BNDO.jpg" width="1156" height="641" /></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="/images/old/galerey/grafik_psih.png" alt="" width="1086" height="927" /></p>
+<p><img src="/images/old/BNDO.jpg" alt="BNDO.jpg" width="1156" height="641" /></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

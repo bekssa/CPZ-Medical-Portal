@@ -52,7 +52,7 @@ export default function Page() {
 	
 		
 								<div itemprop="articleBody">
-		<p><img src="../../../images/GZ/obiav_tender_page-0001.jpg" alt="obiav tender page 0001" /></p> 	</div>
+		<p><img src="/images/old/GZ/obiav_tender_page-0001.jpg" alt="obiav tender page 0001" /></p> 	</div>
 
 	
 							` }} />

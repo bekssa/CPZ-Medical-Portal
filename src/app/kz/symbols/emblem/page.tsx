@@ -52,7 +52,7 @@ export default function Page() {
 	
 		
 								<div itemprop="articleBody">
-		<div ><img  src="../../images/Gerb.png" alt="Gerb" width="175" height="177" /></div>
+		<div ><img  src="/images/old/Gerb.png" alt="Gerb" width="175" height="177" /></div>
 <div >&nbsp;</div>
 <div >
 <p>Герб – один из главных символов государства. Термин «герб» происходит от немецкого слова «erbe» (наследство) и означает наследственный отличительный знак – сочетание фигур и предметов, которым придается символическое значение.</p>

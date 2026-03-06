@@ -78,8 +78,8 @@ export default function Page() {
 
 
 <p>&nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="../../images/2GIS300921.jpg" alt="2GIS300921.jpg" /><img src="../../images/2020-01.jpg" alt="2020-01.jpg" /><img src="../../images/2020-02.jpg" alt="2020-02.jpg" /><img src="../../images/Blagodarnost.jpg" alt="Blagodarnost.jpg" /></p>
-<p><img src="../../images/WhatsApp_Image_2020-01-17_at_14.07.59.jpg" alt="WhatsApp Image 2020-01-17 at 14.07.59.jpeg" /></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="/images/old/2GIS300921.jpg" alt="2GIS300921.jpg" /><img src="/images/old/2020-01.jpg" alt="2020-01.jpg" /><img src="/images/old/2020-02.jpg" alt="2020-02.jpg" /><img src="/images/old/Blagodarnost.jpg" alt="Blagodarnost.jpg" /></p>
+<p><img src="/images/old/WhatsApp_Image_2020-01-17_at_14.07.59.jpg" alt="WhatsApp Image 2020-01-17 at 14.07.59.jpeg" /></p>
 <p>&nbsp;</p>
 <p><strong >Мы жители города Алматы проживаем по адресу&nbsp; - улица Тлендиева, дома №141,143,146,147</strong></p>
 <p ><span ><strong>В течениинекоторого времени, наша соседка не давала возможности нам нормально жить, пугала наших детей, нарушала общественное спокойствие. </strong></span></p>
@@ -114,15 +114,15 @@ export default function Page() {
 <p><span ><strong><span ></span></strong></span></p>
 <p><span ><strong><span ></span></strong></span></p>
 <p><span ><strong><span ></span></strong></span></p>
-<p><span ><strong><span ><img src="../../images/sa_01.jpg" alt="sa_01.jpg" /><img src="../../images/Blag_pism.jpg" alt="Blag_pism.jpg" width="621" height="687" /></span></strong></span></p>
+<p><span ><strong><span ><img src="/images/old/sa_01.jpg" alt="sa_01.jpg" /><img src="/images/old/Blag_pism.jpg" alt="Blag_pism.jpg" width="621" height="687" /></span></strong></span></p>
 <p><span ><strong><span >Римма 20 июля в 17:14 Ответить&nbsp;&nbsp;</span></strong></span><br ><span ><strong><span >Добрый день! Сегодня муж сдавал анализы на шоферские права. Врачи у вас очень вежливые. </span></strong></span></p>
 <p><span ><strong><span >Несмотря, что время было уже обеденное,&nbsp;</span></strong></span><strong ><span >они приняли анализы и выдали справку.</span></strong></p>
 <p><strong ><span > Мы получили удовольствие от профессионального отношения вречей, за что хочу сказать огромное спасибо!</span></strong></p>
-<p>&nbsp;<img src="../../images/IMG-20171109-WA0019.jpg" alt="IMG-20171109-WA0019.jpg" /><img src="../../images/IMG-20171109-WA0018.jpg" alt="IMG-20171109-WA0018.jpg" /><img src="../../images/IMG-20171109-WA0021.jpg" alt="IMG-20171109-WA0021.jpg" /><img src="../../images/IMG-20171109-WA0020.jpg" alt="IMG-20171109-WA0020.jpg" /></p>
+<p>&nbsp;<img src="/images/old/IMG-20171109-WA0019.jpg" alt="IMG-20171109-WA0019.jpg" /><img src="/images/old/IMG-20171109-WA0018.jpg" alt="IMG-20171109-WA0018.jpg" /><img src="/images/old/IMG-20171109-WA0021.jpg" alt="IMG-20171109-WA0021.jpg" /><img src="/images/old/IMG-20171109-WA0020.jpg" alt="IMG-20171109-WA0020.jpg" /></p>
 <p>&nbsp;</p>
-<p><img src="../../images/Blagpismo1.jpg" alt="" width="805" height="995" /></p>
+<p><img src="/images/old/Blagpismo1.jpg" alt="" width="805" height="995" /></p>
 <p>&nbsp;</p>
-<p><img src="../../images/Blagpismo2.jpg" alt="" width="811" height="1169" /></p>
+<p><img src="/images/old/Blagpismo2.jpg" alt="" width="811" height="1169" /></p>
 
 
 

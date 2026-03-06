@@ -55,29 +55,29 @@ export default function Page() {
 		<p>&nbsp;</p>
 <p ><span >&nbsp;<span >Состав наблюдательного совета</span></span></p>
 <p>&nbsp;</p>
-<p><img src="../../images/Almas.jpg" alt="Almas.jpeg" width="625" height="1017" />&nbsp;</p>
+<p><img src="/images/old/Almas.jpg" alt="Almas.jpeg" width="625" height="1017" />&nbsp;</p>
 <p>&nbsp;</p>
 <p><span ><strong><span >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Несипкалиев Алмас Жуматович&nbsp; &nbsp;</span></strong></span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="../../images/Aueshan.jpg" alt="Aueshan.jpeg" width="625" height="686" /></p>
+<p><img src="/images/old/Aueshan.jpg" alt="Aueshan.jpeg" width="625" height="686" /></p>
 <p>&nbsp;</p>
 <p><strong ><span >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Джумабеков Ауесхан Толегенович</span></strong></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;<img src="../../images/Dautova.jpg" alt="Dautova.jpeg" /></p>
+<p>&nbsp;<img src="/images/old/Dautova.jpg" alt="Dautova.jpeg" /></p>
 <p ><span >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong><span >Даутова Алтын Юсуповна</span></strong></span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;<img src="../../images/Kamilla.jpg" alt="Kamilla.jpeg" width="626" height="825" /></p>
+<p>&nbsp;<img src="/images/old/Kamilla.jpg" alt="Kamilla.jpeg" width="626" height="825" /></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span >&nbsp;<strong><span >Файзуллина Камила Мухаметкалиевна</span></strong></span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;<img src="../../images/Erkebulan.jpg" alt="Erkebulan.jpeg" width="628" height="658" /></p>
+<p>&nbsp;<img src="/images/old/Erkebulan.jpg" alt="Erkebulan.jpeg" width="628" height="658" /></p>
 <p><span ><strong><span >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Буркитбаев Еркебулан Утегенович</span></strong></span></p>
 <p>&nbsp;</p>
-<p><img src="../../images/Akerke.jpg" alt="Akerke.jpeg" width="629" height="684" /></p>
+<p><img src="/images/old/Akerke.jpg" alt="Akerke.jpeg" width="629" height="684" /></p>
 <p><span ><span >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span >Шуленбаева&nbsp; Акерке&nbsp; Мейрмановна</span></span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
