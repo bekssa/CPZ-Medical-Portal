@@ -20,7 +20,13 @@ function findBreadcrumbs(
     return null;
 }
 
-export default function Breadcrumbs() {
+interface BreadcrumbsProps {
+    items?: { label: string; href: string }[];
+    className?: string;
+}
+
+export { Breadcrumbs };
+export default function Breadcrumbs(_props?: BreadcrumbsProps) {
     const pathname = usePathname();
     const crumbs = findBreadcrumbs(navigation, pathname) || [];
 
