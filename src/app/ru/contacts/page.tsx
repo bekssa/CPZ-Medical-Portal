@@ -1,5 +1,131 @@
 import Link from 'next/link';
 
+const leadership = [
+  {
+    title: 'Директор',
+    name: 'Рахменшеев Сапар Куттыбаевич',
+    schedule: '08:00 – 17:00, обед 13:00–14:00',
+    phones: [
+      { label: 'Психиатрическая служба', number: '8(727) 376-55-75' },
+      { label: 'Наркологическая служба', number: '8(727) 382-36-44' },
+    ],
+  },
+  {
+    title: 'Приемная директора',
+    name: '',
+    schedule: '08:00 – 17:00, обед 13:00–14:00',
+    phones: [
+      { label: 'Психиатрическая служба', number: '8(727) 376-55-95' },
+      { label: 'Наркологическая служба', number: '8(727) 382-36-44' },
+    ],
+  },
+  {
+    title: 'Зам. директора по психиатрической службе',
+    name: 'Жолдыбаева Жанна Сагатовна',
+    schedule: '08:00 – 17:00, обед 13:00–14:00',
+    phones: [{ number: '+7(727) 376-55-93' }],
+  },
+  {
+    title: 'Зам. директора по наркологической службе',
+    name: 'Татиева Роза Жексембаевна',
+    schedule: '08:00 – 17:00, обед 13:00–14:00',
+    phones: [{ number: '+7(727) 382-35-33' }],
+  },
+  {
+    title: 'Зам. директора по качеству оказываемых услуг',
+    name: 'Худаир Жанна Рафхатовна',
+    schedule: '08:00 – 17:00, обед 13:00–14:00',
+    phones: [{ number: '+7(727) 376-55-31' }],
+  },
+  {
+    title: 'Зам. директора по противоэпидемической службе',
+    name: 'Аскаров Марат Амиршеевич',
+    schedule: '08:00 – 17:00, обед 13:00–14:00',
+    phones: [{ number: '+7(727) 390-16-61' }],
+  },
+  {
+    title: 'Главная медсестра',
+    name: 'Алимжанова Батыркуль Сатыбалдиевна',
+    schedule: '08:00 – 17:00, обед 13:00–14:00',
+    phones: [{ number: '+7(727) 376-55-91' }],
+  },
+  {
+    title: 'Врач-эксперт',
+    name: 'Ротманова Екатерина Александровна',
+    schedule: '08:00 – 17:00, обед 13:00–14:00',
+    phones: [{ number: '+7(727) 376-55-84' }],
+  },
+];
+
+const clinics = [
+  {
+    title: 'Регистратура — Психиатрическая служба',
+    schedule: 'Пн–Пт 08:00–17:00, Сб до 15:00, Вс — выходной',
+    phones: [
+      '+7(727) 376-55-86',
+      '+7(727) 390-74-88',
+      '8 705 191 02 57',
+      '+7(727) 376-55-81 (заведующая взрослой поликлиники)',
+    ],
+  },
+  {
+    title: 'Детская регистратура',
+    schedule: '08:00–17:00',
+    phones: [
+      '+7 747 496-64-20',
+      '+7(727) 338-77-73',
+    ],
+  },
+  {
+    title: 'Регистратура — Наркологическая служба',
+    schedule: '',
+    phones: ['+7(727) 382-34-19'],
+  },
+  {
+    title: 'Аптека — Психиатрическая служба',
+    schedule: 'Пн–Пт 08:00–17:00, обед 13:00–14:00, Сб 09:00–13:00',
+    phones: ['+7(727) 376-54-84'],
+  },
+  {
+    title: 'Рентген кабинет',
+    schedule: 'Пн–Пт 08:00–15:00, обед 13:00–14:00',
+    phones: ['+7(727) 390-16-61'],
+  },
+];
+
+const emergencyServices = [
+  {
+    title: 'Платное отделение — Психиатрическая служба',
+    schedule: 'Пн–Пт 08:00–17:00',
+    phones: ['+7(727) 376-54-40'],
+  },
+  {
+    title: 'Платное отделение — Наркологическая служба',
+    schedule: 'Пн–Пт 08:00–17:00',
+    phones: ['+7(727) 382-36-81', '8 705 778 97 17'],
+  },
+  {
+    title: 'Приемный покой — Психиатрическая служба',
+    schedule: 'Круглосуточно 24/7',
+    phones: ['+7(727) 229-11-06'],
+  },
+  {
+    title: 'Приемный покой — Наркологическая служба',
+    schedule: 'Круглосуточно 24/7',
+    phones: ['+7(727) 382-36-21'],
+  },
+  {
+    title: 'Отделение специализированной неотложной скорой помощи',
+    schedule: 'Круглосуточно 24/7',
+    phones: ['+7(727) 376-55-96', '+7(727) 376-55-94'],
+  },
+  {
+    title: 'Экспертиза',
+    schedule: 'Круглосуточно 24/7',
+    phones: ['+7(727) 382-33-68', '+7(727) 382-34-62'],
+  },
+];
+
 export default function Page() {
   return (
     <div className="bg-[var(--bg)] min-h-screen">
@@ -13,355 +139,135 @@ export default function Page() {
         </nav>
 
         <article className="bg-white rounded-2xl border border-[var(--border)] p-6 md:p-8 shadow-sm">
-          <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 pb-4 border-b border-[var(--border-light)] leading-snug">
+          <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4 pb-4 border-b border-[var(--border-light)] leading-snug">
             Контакты
           </h1>
 
-          <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
-            <div dangerouslySetInnerHTML={{ __html: `
-	<meta itemprop="inLanguage" content="ru-RU">
-	
-		
-			<div className="page-header">
-		<h2 itemprop="headline">
-			Контакты		</h2>
-							</div>
-							
+          <div className="text-center mb-8">
+            <p className="text-lg font-bold text-[var(--text-primary)]">
+              Коммунальное государственное предприятие на праве хозяйственного ведения
+            </p>
+            <p className="text-lg font-bold text-[var(--primary)]">
+              «Центр психического здоровья»
+            </p>
+            <p className="text-sm text-[var(--text-muted)]">
+              Управления общественного здравоохранения города Алматы
+            </p>
+          </div>
 
-			
-		
-						<dl className="article-info muted">
+          {/* Hotlines */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+            <div className="p-4 rounded-xl bg-gradient-to-br from-red-50 to-red-100/50 border border-red-200">
+              <div className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-1">Телефон доверия</div>
+              <div className="text-2xl font-bold text-red-700">13-03</div>
+              <div className="text-sm text-red-600 mt-1">8 708 983 28 63</div>
+            </div>
+            <div className="p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/50 border border-blue-200">
+              <div className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-1">ЕКЦ</div>
+              <div className="text-2xl font-bold text-blue-700">14-14</div>
+              <div className="text-sm text-blue-600 mt-1">Республиканский: 3580</div>
+            </div>
+            <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50 to-teal-100/50 border border-teal-200">
+              <div className="text-xs font-semibold text-teal-600 uppercase tracking-wide mb-1">Психиатрическая служба</div>
+              <div className="text-lg font-bold text-teal-700">8 727 376-56-60</div>
+            </div>
+            <div className="p-4 rounded-xl bg-gradient-to-br from-amber-50 to-amber-100/50 border border-amber-200">
+              <div className="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-1">Наркологическая служба</div>
+              <div className="text-lg font-bold text-amber-700">+7 727 382-34-62</div>
+            </div>
+            <div className="sm:col-span-2 p-4 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100/50 border border-purple-200">
+              <div className="text-xs font-semibold text-purple-600 uppercase tracking-wide mb-1">Поликлиника детского отделения</div>
+              <div className="text-lg font-bold text-purple-700">8 747 496 64 20</div>
+            </div>
+          </div>
 
-		
-			<dt className="article-info-term">
-									Подробности							</dt>
+          {/* Leadership */}
+          <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 pb-3 border-b border-[var(--border-light)] flex items-center gap-2">
+            <span className="w-1 h-5 bg-[var(--primary)] rounded-full inline-block" />
+            Руководство
+          </h2>
+          <div className="space-y-3 mb-10">
+            {leadership.map((person) => (
+              <div key={person.title} className="p-4 rounded-xl border border-[var(--border)] hover:border-[var(--primary)]/30 transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-[var(--text-primary)]">{person.title}</div>
+                    {person.name && (
+                      <div className="text-sm text-[var(--text-secondary)] mt-0.5">{person.name}</div>
+                    )}
+                    {person.schedule && (
+                      <div className="text-xs text-[var(--text-muted)] mt-1">🕐 {person.schedule}</div>
+                    )}
+                  </div>
+                  <div className="shrink-0 space-y-1">
+                    {person.phones.map((phone) => (
+                      <div key={phone.number} className="text-sm">
+                        <a href={`tel:${phone.number.replace(/[\s()-]/g, '')}`} className="font-medium text-[var(--primary)] no-underline hover:underline">
+                          {phone.number}
+                        </a>
+                        {'label' in phone && phone.label && (
+                          <span className="text-xs text-[var(--text-muted)] ml-1">({phone.label})</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-			
-			
-			
-			
-			
-		
-					
-			
-										<dd className="hits">
-					<span className="icon-eye-open" aria-hidden="true"></span>
-					<meta itemprop="interactionCount" content="UserPageVisits:115065">
-					Просмотров: 115065			</dd>						</dl>
-	
-	
-		
-								<div itemprop="articleBody">
-		<p>&nbsp;</p>
-<p className="MsoNormal" align="center" ><b><span >Коммунальное государственное&nbsp; предприятие на праве хозяйственного ведения<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><b><span >«Центр психического здоровья»<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><b><span >Управления общественного здравоохранения города Алматы<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><b><span ><o:p>&nbsp;</o:p></span></b></p>
-<p className="MsoNormal" ><strong><span ><span >Call center </span><span >Единый городской медицинский Call-центр Алматы по номеру&nbsp;</span></span><span ><span >3000-103<span >&nbsp; </span>отключен</span></span></strong><b><span ><span ><o:p></o:p></span></span></b></p>
-<p className="MsoNormal" ><b><span ><o:p>&nbsp;</o:p></span></b></p>
-<p className="MsoNormal" ><span >ЕКЦ&nbsp;14-14</span><b><span ><o:p></o:p></span></b></p>
-<p className="MsoNormal" ><span >Республиканский</span><b><span ><o:p></o:p></span></b></p>
-<p className="MsoNormal" ><span >&nbsp;3580<o:p></o:p></span></p>
-<p className="MsoNormal" align="right" ><b ><span ><span >Телефон доверия</span></span></b><b ><span ><span ><o:p></o:p></span></span></b></p>
-<p className="MsoNormal" ><span >&nbsp;Психиатрическая служба<span >&nbsp; </span></span><span >8 727</span><span >&nbsp;376-56-60<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >&nbsp;Наркологическая служба<span >&nbsp; </span></span><span >+7 727</span><span >&nbsp;382-34-62<o:p></o:p></span></p>
-<p className="MsoNormal" ><span ><span ></span>&nbsp;</span><span id="cloak9b3fea7e5a650ea6de69d5af16736770">Этот адрес электронной почты защищён от спам-ботов. У вас должен быть включен JavaScript для просмотра.</span><span ><o:p></o:p></span></p>
-<p className="MsoNormal" ><span >&nbsp;Телефон доверия&nbsp;</span><b><span >13-03</span></b><span ><o:p></o:p></span></p>
-<p className="MsoNormal" ><span >&nbsp;Телефон доверия&nbsp;</span><b><span >8 708 983 28 63</span></b><span ><o:p></o:p></span></p>
-<p className="MsoNormal" ><span >&nbsp;Поликлиника детского отделения&nbsp;</span><b><span >8 747 496 64 20<o:p></o:p></span></b></p>
-<p className="MsoNormal" ><b><span ><o:p>&nbsp;</o:p></span></b></p>
-<p className="MsoNormal" ><b><span >Контакты</span></b><o:p></o:p></p>
-<p className="MsoNormal" ><o:p>&nbsp;</o:p></p>
-<table className="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" >
-<tbody>
-<tr >
-<td width="172" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Должность</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="137" valign="top" >
-<p className="MsoNormal" ><b><span >Ф.И.О.</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="135" valign="top" >
-<p className="MsoNormal" ><b><span >Режим работы</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><b><span >Контакты</span></b><span ><o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" rowspan="2" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Директор</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="137" rowspan="2" valign="top" >
-<p className="MsoNormal" ><span >&nbsp;Рахменшеев Сапар Куттыбаевич<o:p></o:p></span></p>
-</td>
-<td width="135" rowspan="2" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp; </span><o:p></o:p></span></p>
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp; </span>08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" align="center" ><span ><span ></span>8(727) 376-55-75<b> Психиатрическая служба</b>&nbsp;<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="198" valign="top" >
-<p className="MsoNormal" align="center" ><span >8(727) 382-36-44<o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><b><span >Наркологическая<span >&nbsp; </span>служба</span></b><span ><o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" rowspan="2" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Приемная <o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><b><span >директора<o:p></o:p></span></b></p>
-</td>
-<td width="137" rowspan="2" valign="top" >&nbsp;</td>
-<td width="135" rowspan="2" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp; </span>08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" align="center" ><span ><span ></span>8(727) 376-55-95<b> Психиатрическая служба</b>&nbsp;<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="198" valign="top" >
-<p className="MsoNormal" align="center" ><span >8(727) 382-36-44<o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><b><span >Наркологическая<span >&nbsp; </span>служба</span></b><span ><o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Заместитель директора по психиатрической службе</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="137" valign="top" >
-<p className="MsoNormal" ><span >Жолдыбаева Жанна Сагатовна<o:p></o:p></span></p>
-</td>
-<td width="135" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp; </span>08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>+7(727) 376-55-93<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Заместитель директора по наркологической службе</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="137" valign="top" >
-<p className="MsoNormal" ><span >Татиева Роза Жексембаевна<o:p></o:p></span></p>
-</td>
-<td width="135" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp; </span>08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp;&nbsp; </span>+7(727)382-35-33<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Заместитель директора по качеству оказываемых услуг</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="137" valign="top" >
-<p className="MsoNormal" ><span >Худаир Жанна Рафхатовна</span><span ><o:p></o:p></span></p>
-</td>
-<td width="135" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp; </span>08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span ><span ></span><span >&nbsp;&nbsp;&nbsp; </span>+7(727)376-55-31<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Заместитель директора по противоэпидемической службе</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="137" valign="top" >
-<p className="MsoNormal" ><span >Аскаров Марат Амиршеевич</span><span ><o:p></o:p></span></p>
-</td>
-<td width="135" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp;&nbsp; </span>08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>+7(727)390-16-61<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Главная медсестра</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="137" valign="top" >
-<p className="MsoNormal" ><span >Алимжанова Батыркуль Сатыбалдиевна<o:p></o:p></span></p>
-</td>
-<td width="135" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp;&nbsp; </span>08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span >Тел. +7(727)376-55-91<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Врач-эксперт</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="137" valign="top" >
-<p className="MsoNormal" ><span >Ротманова Екатерина Александровна<o:p></o:p></span></p>
-</td>
-<td width="135" valign="top" >
-<p className="MsoNormal" ><span ><span >&nbsp;&nbsp;&nbsp;&nbsp; </span>08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span >Тел. +7(727)376-55-84<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" rowspan="3" valign="top" >
-<p className="MsoNormal" align="center" ><b><span ><o:p>&nbsp;</o:p></span></b></p>
-<p className="MsoNormal" align="center" ><b><span ><o:p>&nbsp;</o:p></span></b></p>
-<p className="MsoNormal" align="center" ><b><span ><o:p>&nbsp;</o:p></span></b></p>
-<p className="MsoNormal" align="center" ><b><span >Поликлиника</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="272" colspan="2" valign="top" >
-<p className="MsoNormal" align="center" ><b><span ><span >Регистратура&nbsp;</span></span></b><b><span >Психиатрическая служба<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><span >Понедельник – пятница<o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >08:00 – 17:00<o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >Суббота до 15:00<o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >Воскресенье - выходной<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span >+7&nbsp;<b>(727) 376-55-86</b>&nbsp;&nbsp;<o:p></o:p></span></p>
-<p className="MsoNormal" ><b><span >+7 (727)&nbsp;390-74-88<span >&nbsp; </span><span >&nbsp;&nbsp;&nbsp;</span>87051910257</span></b><span ><o:p></o:p></span></p>
-<p className="MsoNormal" ><span >+<b>7(727)376-55-81</b>&nbsp;(заведующая взрослой поликлиники) <o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="272" colspan="2" valign="top" >
-<p className="MsoNormal" align="center" ><b ><span >Детская регистратура<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><span >08:00-17:00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><b><span >+</span></b><span >7 747&nbsp;496-64-20</span></p>
-<p className="MsoNormal" ><span ><span >+7(727) 338-77-73</span>&nbsp;<o:p></o:p></span></p>
-<p className="MsoNormal" ><span ><span >+7(727) 376-55-92<strong >&nbsp;</strong></span></span></p>
-<p className="MsoNormal" ><span ><span ><strong >отключен</strong></span><b><o:p></o:p></b></span></p>
-<p className="MsoNormal" >&nbsp;</p>
-</td>
-</tr>
-<tr >
-<td width="272" colspan="2" valign="top" >
-<p className="MsoNormal" ><b><span ><span ><span >&nbsp; </span>Регистратура&nbsp;</span></span></b><b ><span > <span >Наркологическая<span >&nbsp; </span>служба</span><o:p></o:p></span></b></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><b><span ><span >-7(727)&nbsp;382-34-19</span></span></b><b><span ><span ><o:p></o:p></span></span></b></p>
-</td>
-</tr>
-<tr >
-<td width="172" valign="top" >
-<p className="MsoNormal" align="center" ><b><span >Аптека от поликлиники <o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><b><span >Психиатрическая служба</span></b><span ><o:p></o:p></span></p>
-</td>
-<td width="272" colspan="2" valign="top" >
-<p className="MsoNormal" align="center" ><span >08:00 – 17:00 <o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >обед с 13:00 -14:00<o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >Суббота<o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >с 9.00-13.00<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span >+7(727)<span >376-54-84</span><o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="172" valign="top" ><span ><strong>Рентген кабинет</strong></span></td>
-<td width="272" valign="top"  colspan="2">
-<p ><span >с Пн по Пт 08:00 – 15:00</span></p>
-<p ><span >обед с 13:00 -14:00</span></p>
-</td>
-<td width="198" valign="top" >+7(727)390-16-61</td>
-</tr>
-<tr >
-<td width="444" colspan="3" >
-<p className="MsoNormal" align="center" ><b><span >Платное отделение Психиатрическая служба.<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><span >Понедельник – пятница<span >&nbsp;&nbsp; </span>08:00 – 17:00 часов<b ><o:p></o:p></b></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span >&nbsp;+7(727)&nbsp;<span >376-54-40</span><o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="444" colspan="3" >
-<p className="MsoNormal" align="center" ><b><span >Платное отделение<span >&nbsp; </span>Наркологическая<span >&nbsp; </span>служба.<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><span >Понедельник – пятница<span >&nbsp;&nbsp; </span>08:00 – 17:00 часов<b ><o:p></o:p></b></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span >+7(727)&nbsp;<span >382-36-81</span><o:p></o:p></span></p>
-<p className="MsoNormal" ><span >8&nbsp;705&nbsp;778 97 17</span><span ><o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="444" colspan="3" >
-<p className="MsoNormal" align="center" ><b><span >Приемный покой Психиатрическая служба</span></b><span ><o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >Круглосуточно<span >&nbsp; </span>24/7<b ><o:p></o:p></b></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span >+7<span >(727) 229-11-06</span><o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="444" colspan="3" >
-<p className="MsoNormal" align="center" ><b><span >Приемный покой Наркологическая<span >&nbsp; </span>служба.<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><span >Круглосуточно<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>24/7<b><o:p></o:p></b></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span >7(727) 382-36-21<o:p></o:p></span></p>
-</td>
-</tr>
-<tr >
-<td width="444" colspan="3" >
-<p className="MsoNormal" align="center" ><b><span >Отделение специализированной &nbsp;неотложной скорой помощи<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><span >Круглосуточно<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>24/7<b ><o:p></o:p></b></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" ><span ><span >тел.: +7 (727) 390-16-63 <b>отключен</b></span></span><b ><span ><span ><o:p></o:p></span></span></b></p>
-<p className="MsoNormal" align="center" ><span >+<span >7 (727) 376-55-96</span><o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >+7 (727) 376-55-94<b><o:p></o:p></b></span></p>
-</td>
-</tr>
-<tr >
-<td width="444" colspan="3" >
-<p className="MsoNormal" align="center" ><span >Телефон доверия в кризисных ситуациях<o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span >Круглосуточно<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>24/7<b ><o:p></o:p></b></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" align="center" ><span >+7(727) 376-56 -60</span><span ><span ><o:p></o:p></span></span></p>
-<p className="MsoNormal" align="center" ><span >8 708 983 28 63</span><span ><o:p></o:p></span></p>
-<p className="MsoNormal" align="center" ><span ><span >Call center</span></span><span ><span > </span></span><span >13-03<b><o:p></o:p></b></span></p>
-</td>
-</tr>
-<tr >
-<td width="444" colspan="3" valign="top" >
-<p className="MsoNormal" align="center" ><b ><span >Экспертиза<o:p></o:p></span></b></p>
-<p className="MsoNormal" align="center" ><span >Круглосуточно<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>24/7<o:p></o:p></span></p>
-</td>
-<td width="198" valign="top" >
-<p className="MsoNormal" align="center" ><span >+7(727)&nbsp;<span >382-33-68<o:p></o:p></span></span></p>
-<p className="MsoNormal" align="center" ><span >7(727)382-34-62</span><span ><o:p></o:p></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p className="MsoNormal" ><o:p>&nbsp;</o:p></p>
-<p>&nbsp;</p> 	</div>
+          {/* Polyclinics */}
+          <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 pb-3 border-b border-[var(--border-light)] flex items-center gap-2">
+            <span className="w-1 h-5 bg-[var(--primary)] rounded-full inline-block" />
+            Поликлиника
+          </h2>
+          <div className="space-y-3 mb-10">
+            {clinics.map((clinic) => (
+              <div key={clinic.title} className="p-4 rounded-xl border border-[var(--border)] hover:border-[var(--primary)]/30 transition-colors">
+                <div className="font-semibold text-[var(--text-primary)]">{clinic.title}</div>
+                {clinic.schedule && (
+                  <div className="text-xs text-[var(--text-muted)] mt-1">🕐 {clinic.schedule}</div>
+                )}
+                <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
+                  {clinic.phones.map((phone) => (
+                    <a key={phone} href={`tel:${phone.replace(/[\s()-]/g, '')}`} className="text-sm font-medium text-[var(--primary)] no-underline hover:underline">
+                      📞 {phone}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
 
-	
-							` }} />
+          {/* Emergency & Special Services */}
+          <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 pb-3 border-b border-[var(--border-light)] flex items-center gap-2">
+            <span className="w-1 h-5 bg-[var(--primary)] rounded-full inline-block" />
+            Службы и экстренная помощь
+          </h2>
+          <div className="space-y-3">
+            {emergencyServices.map((service) => (
+              <div key={service.title} className="p-4 rounded-xl border border-[var(--border)] hover:border-[var(--primary)]/30 transition-colors">
+                <div className="font-semibold text-[var(--text-primary)]">{service.title}</div>
+                {service.schedule && (
+                  <div className="text-xs text-[var(--text-muted)] mt-1">🕐 {service.schedule}</div>
+                )}
+                <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
+                  {service.phones.map((phone) => (
+                    <a key={phone} href={`tel:${phone.replace(/[\s()-]/g, '')}`} className="text-sm font-medium text-[var(--primary)] no-underline hover:underline">
+                      📞 {phone}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Trust hotline highlight */}
+          <div className="mt-10 p-5 rounded-2xl bg-gradient-to-r from-red-500 to-rose-600 text-white text-center">
+            <div className="text-sm font-medium opacity-90 mb-1">Телефон доверия в кризисных ситуациях</div>
+            <div className="text-3xl font-bold tracking-wide">+7(727) 376-56-60</div>
+            <div className="text-lg font-semibold mt-1">8 708 983 28 63</div>
+            <div className="text-sm opacity-80 mt-2">Call center: <strong>13-03</strong> — Круглосуточно 24/7</div>
           </div>
         </article>
       </div>

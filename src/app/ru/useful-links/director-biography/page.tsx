@@ -17,58 +17,48 @@ export default function Page() {
             Биография Директора
           </h1>
 
-          <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-loose">
-            <div dangerouslySetInnerHTML={{ __html: `
-	<meta itemprop="inLanguage" content="ru-RU">
-	
-		
-			<div className="page-header">
-		<h2 itemprop="headline">
-			Биография Директора		</h2>
-							</div>
-							
+          <div className="prose prose-blue max-w-none text-[var(--text-secondary)] leading-relaxed">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4">
+              Рахменшеев Сапар Куттыбаевич
+            </h2>
 
-			
-		
-						<dl className="article-info muted">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-[var(--text-primary)] mt-6 mb-3">Образование</h3>
+              <ul className="space-y-2 list-disc pl-5">
+                <li>1997 г. — окончил Международный Казахско-Турецкий Университет имени Кожа-Ахмета Яссауи по специальности &laquo;Лечебное дело&raquo;.</li>
+                <li>2008 г. — окончил Московскую государственную академию по постдипломному обучению, специальность — Менеджмент в здравоохранении.</li>
+                <li>2012–2014 гг. — обучение в Магистратуре МВА (магистр делового администрирования) по специальности &laquo;Общественное здравоохранение&raquo;, доктор PhD.</li>
+              </ul>
 
-		
-			<dt className="article-info-term">
-									Подробности							</dt>
+              <h3 className="text-lg font-semibold text-[var(--text-primary)] mt-6 mb-3">Трудовая деятельность</h3>
+              <div className="space-y-3">
+                {[
+                  { period: '1997–2006 гг.', role: 'Врач-нарколог ГНЦМСК города Алматы.' },
+                  { period: '2006–2008 гг.', role: 'Заместитель главного врача по лечебной работе ГНЦМСК города Алматы.' },
+                  { period: '2008–2011 гг.', role: 'Заместитель начальника Управления здравоохранения Кызылординской области.' },
+                  { period: '2011–2012 гг.', role: 'Директор Департамента Комитета оплаты медицинских услуг МЗ РК по Алматинской области.' },
+                  { period: '2012–2014 гг.', role: 'Директор Департамента Комитета оплаты медицинских услуг МЗ РК по городу Алматы.' },
+                  { period: '2014–2015 гг.', role: 'Руководитель управления здравоохранения по Кызылординской области.' },
+                  { period: '2016–2017 гг.', role: 'Заместитель директора ТОО «Институт развития здравоохранения».' },
+                  { period: 'С августа 2017 г.', role: 'Главный врач ГКП на ПХВ Городской поликлиники №1 города Алматы.' },
+                  { period: 'С января 2018 г.', role: 'Директор ГКП на ПХВ «Центр психического здоровья» Управления здравоохранения города Алматы.' },
+                ].map((item) => (
+                  <div key={item.period} className="flex gap-3 items-start p-3 rounded-xl border border-[var(--border)] bg-gray-50/50">
+                    <span className="shrink-0 text-sm font-semibold text-[var(--primary)] min-w-[120px]">{item.period}</span>
+                    <span className="text-[var(--text-secondary)]">{item.role}</span>
+                  </div>
+                ))}
+              </div>
 
-			
-			
-			
-			
-			
-		
-					
-			
-										<dd className="hits">
-					<span className="icon-eye-open" aria-hidden="true"></span>
-					<meta itemprop="interactionCount" content="UserPageVisits:11166">
-					Просмотров: 11166			</dd>						</dl>
-	
-	
-		
-								<div itemprop="articleBody">
-		<p className="hover" ><span ><strong>&nbsp; &nbsp;&nbsp;</strong><strong><span className="visited">Рахменшеев Сапар Куттыбаевич -</span></strong><span className="visited">&nbsp;родился в 1974 году, по национальности казах. </span></span></p>
-<p className="hover" ><span ><span className="visited">В 1997 году окончил Международный Казахско-Турецкий Университет имени Кожа-Ахмета Яссауи по специальности "Лечебное дело". </span></span></p>
-<p className="hover" ><span ><span className="visited">В 2008 году окончил Московскую государственную академию по постдипломному обучению, специальность - Менеджмент в здравоохранении.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span></p>
-<p className="hover" ><span ><span className="visited">С 2012 - 2014 года проходил обучение в Магистратуре МВА (магистр делового&nbsp;</span><span className="visited">администрирования по специальности "Общественное здравоохранение",&nbsp; доктор PhD.&nbsp;</span></span></p>
-<p className="hover" ><span className="visited" >С 1997 - 2006 гг. Занимал должность врача-нарколога ГНЦМСК города Алматы.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p className="hover" ><span ><span className="visited">С</span><span className="visited">&nbsp;2006-2008 гг. работал Заместителем главного врача по лечебной работе ГНЦМСК города Алматы.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></span></p>
-<p className="hover" ><span ><span className="visited">С августа 2008 - 2011 гг. занимал должность Заместителя начальника Управления здравоохранения Кызылординской области.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span></p>
-<p className="hover" ><span ><span className="visited">С июля 2011 по май 2012 гг.</span><span className="visited">&nbsp;Директор Департамента Комитета оплаты медицинских услуг МЗ РК по&nbsp; Алматинской области.&nbsp;</span></span></p>
-<p className="hover" ><span className="visited" >С июня 2012 по июнь 2014 гг. Директор Департамента Комитета оплаты медицинских услуг МЗ РК по городу Алматы.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-<p className="hover" ><span className="visited" >Июль 2014 по октябрь 2015 год на должности Руководитель управления здравоохранения по Кызылординской области.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span className="visited" >С мая 2016 года по август 2017 года Заместитель директора ТОО "Институт развития здравоохранения"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p className="hover" ><span className="visited" >С 15 августа 2017 года - Главный врач ГКП на ПХВ Городской поликлиники №1 города Алматы.&nbsp; &nbsp;</span></p>
-<p className="hover" ><span className="visited" >Является отличником здравоохранения, имеет большой опыт работы в организациях здравоохранения и Управления здравоохранения.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p className="hover" ><span className="visited" >Владеет языками: казахский, русский и английский.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p className="hover" ><span className="visited" >С января 2018 года назначен директором в ГКП на ПХВ "Центра психического здоровья" Управления здравоохранения города Алматы</span></p> 	</div>
-
-	
-							` }} />
+              <div className="mt-6 p-4 rounded-xl bg-blue-50/50 border border-blue-100">
+                <p className="text-[var(--text-secondary)] mb-2">
+                  Является отличником здравоохранения, имеет большой опыт работы в организациях здравоохранения и Управления здравоохранения.
+                </p>
+                <p className="text-[var(--text-secondary)]">
+                  <strong>Владеет языками:</strong> казахский, русский и английский.
+                </p>
+              </div>
+            </div>
           </div>
         </article>
       </div>
